@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luminar Studio | Logotipos que Dejan Huella</title>
+  <title>Luminar Studio | Identidad Visual Premium</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -14,20 +14,22 @@
     }
 
     :root {
-      --black: #0a0a0a;
-      --gold: #d4af37;
+      --primary: #1a1a1a;
+      --accent: #d4af37;
+      --accent-light: #f0e68c;
       --white: #ffffff;
-      --light-gray: #f5f5f5;
-      --gray: #888888;
+      --light-bg: #fafafa;
+      --text-gray: #555555;
       --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background: var(--white);
-      color: var(--black);
+      background: var(--light-bg);
+      color: var(--primary);
       overflow-x: hidden;
       scroll-behavior: smooth;
+      line-height: 1.7;
     }
 
     h1, h2, h3 {
@@ -54,14 +56,18 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      background: rgba(10, 10, 10, 0.95);
+      background: rgba(26, 26, 26, 0.95);
       color: var(--white);
+      backdrop-filter: blur(10px);
     }
 
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 800;
-      color: var(--gold);
+      background: linear-gradient(135deg, var(--white), var(--accent-light));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     nav ul {
@@ -74,11 +80,23 @@
       color: var(--white);
       text-decoration: none;
       font-weight: 500;
-      transition: var(--transition);
+      position: relative;
+      padding: 0.4rem 0;
     }
 
-    nav a:hover {
-      color: var(--gold);
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     /* --- Hero --- */
@@ -87,143 +105,145 @@
       display: flex;
       align-items: center;
       padding-top: 7rem;
-      background: var(--black);
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
       color: var(--white);
       position: relative;
       overflow: hidden;
     }
 
-    #particles-js {
+    .hero::before {
+      content: "";
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 70%);
+      top: -300px;
+      right: -300px;
       z-index: 1;
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 680px;
       position: relative;
       z-index: 2;
     }
 
     .hero h1 {
-      font-size: 3.8rem;
+      font-size: 3.9rem;
       line-height: 1.1;
-      margin-bottom: 1.2rem;
-      background: linear-gradient(to right, var(--white), var(--gold));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
     }
 
     .hero p {
       font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 2.2rem;
-      line-height: 1.7;
+      color: #ddd;
+      margin-bottom: 2.3rem;
+      font-weight: 300;
     }
 
     .btn-whatsapp {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
-      padding: 1rem 2.4rem;
-      background: #25D366;
+      gap: 0.9rem;
+      padding: 1.05rem 2.5rem;
+      background: linear-gradient(135deg, #25D366, #128C7E);
       color: white;
       font-weight: 700;
       text-decoration: none;
       border-radius: 50px;
       transition: var(--transition);
-      font-size: 1.1rem;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+      font-size: 1.12rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
     }
 
     .btn-whatsapp:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(37, 211, 102, 0.7);
     }
 
     /* --- Servicios --- */
     .services {
-      padding: 7rem 5%;
-      background: var(--light-gray);
+      background: var(--white);
       text-align: center;
     }
 
     .services h2 {
-      font-size: 2.6rem;
-      margin-bottom: 1.2rem;
-      color: var(--black);
+      font-size: 2.7rem;
+      margin-bottom: 1.4rem;
+      color: var(--primary);
     }
 
     .services p {
-      color: var(--gray);
-      max-width: 600px;
-      margin: 0 auto 3rem;
-      font-size: 1.05rem;
+      color: var(--text-gray);
+      max-width: 620px;
+      margin: 0 auto 3.2rem;
+      font-size: 1.08rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.2rem;
     }
 
     .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
+      background: var(--light-bg);
+      padding: 2.2rem;
+      border-radius: 16px;
       transition: var(--transition);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     }
 
     .service-icon {
-      font-size: 2.4rem;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1.3rem;
     }
 
     .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.8rem;
+      font-size: 1.35rem;
+      margin-bottom: 0.9rem;
     }
 
     /* --- Portfolio --- */
     .portfolio {
-      padding: 6rem 5%;
-      background: white;
+      background: #f8f8f8;
     }
 
     .portfolio h2 {
       text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 3rem;
+      font-size: 2.7rem;
+      margin-bottom: 3.2rem;
+      color: var(--primary);
     }
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.6rem;
     }
 
     .portfolio-item {
-      border-radius: 8px;
+      border-radius: 14px;
       overflow: hidden;
-      height: 260px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      height: 270px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       transition: var(--transition);
     }
 
     .portfolio-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: scale(1.04);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
     }
 
     .portfolio-item img {
@@ -234,128 +254,158 @@
 
     /* --- Testimonios --- */
     .testimonials {
-      padding: 6rem 5%;
-      background: #0f0f0f;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
       color: white;
       text-align: center;
+      padding: 7rem 5%;
     }
 
     .testimonials h2 {
-      font-size: 2.4rem;
-      margin-bottom: 3rem;
+      font-size: 2.6rem;
+      margin-bottom: 3.2rem;
     }
 
     .testimonial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.4rem;
     }
 
     .testimonial-card {
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
-      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      padding: 2.2rem;
+      border-radius: 16px;
       backdrop-filter: blur(10px);
       border: 1px solid rgba(212, 175, 55, 0.2);
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+
+    .quote-icon {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 1.3rem;
     }
 
     .testimonial-text {
       font-style: italic;
-      margin-bottom: 1.2rem;
-      line-height: 1.7;
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
 
     .testimonial-author {
-      font-weight: 600;
-      color: var(--gold);
+      font-weight: 700;
+      color: var(--accent-light);
+      font-size: 1.1rem;
+    }
+
+    .business-name {
+      font-weight: 500;
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
     }
 
     /* --- Sobre mí --- */
     .about {
-      padding: 6rem 5%;
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
       text-align: center;
+      padding: 7rem 5%;
     }
 
     .about h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1.2rem;
+      font-size: 2.6rem;
+      margin-bottom: 1.4rem;
+      color: var(--primary);
     }
 
     .about p {
-      max-width: 700px;
-      margin: 0 auto 1.8rem;
-      color: #ddd;
-      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      color: var(--text-gray);
+      font-size: 1.1rem;
     }
 
     .owner-name {
       font-size: 1.3rem;
-      color: var(--gold);
-      font-weight: 600;
+      color: var(--accent);
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+
+    .location {
+      color: var(--text-gray);
+      font-style: italic;
     }
 
     /* --- Footer --- */
     footer {
-      background: var(--black);
+      background: var(--primary);
       color: #aaa;
-      padding: 3rem 5% 2rem;
+      padding: 3.5rem 5% 2.5rem;
       text-align: center;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
     }
 
-    .social-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #ddd;
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--accent-light);
       text-decoration: none;
+      margin-top: 1rem;
+      font-weight: 600;
       transition: var(--transition);
     }
 
-    .social-link:hover {
-      color: var(--gold);
+    .contact-link:hover {
+      color: var(--accent);
     }
 
     .copyright {
-      margin-top: 2rem;
+      margin-top: 2.2rem;
       color: #666;
     }
 
     /* --- Botón flotante WhatsApp --- */
     .floating-whatsapp {
       position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 65px;
-      height: 65px;
-      background: #25D366;
+      bottom: 2.2rem;
+      right: 2.2rem;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
       color: white;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+      font-size: 1.8rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
       z-index: 2000;
       transition: var(--transition);
     }
 
     .floating-whatsapp:hover {
-      transform: scale(1.15) rotate(10deg);
+      transform: scale(1.15) rotate(12deg);
     }
 
     /* --- Responsive --- */
     @media (max-width: 768px) {
       nav ul { display: none; }
-      .hero h1 { font-size: 2.6rem; }
+      .hero h1 { font-size: 2.8rem; }
       .hero { padding-top: 6rem; }
       .floating-whatsapp {
         bottom: 1.5rem;
         right: 1.5rem;
-        width: 55px;
-        height: 55px;
-        font-size: 1.4rem;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
       }
       .portfolio-grid, .testimonial-grid {
         grid-template-columns: 1fr;
@@ -380,14 +430,13 @@
     </nav>
   </header>
 
-  <!-- Hero with Particles -->
+  <!-- Hero -->
   <section id="inicio" class="hero">
-    <div id="particles-js"></div>
     <div class="hero-content">
-      <h1>Logotipos que dejan huella</h1>
-      <p>Luminar Studio, el estudio creativo de <strong>Luis Javier Arboláez Abreu</strong>, especializado en identidad visual para marcas que quieren destacar con elegancia y poder en Santa Clara y todo Cuba.</p>
+      <h1>Identidad visual que <span>ilumina</span> marcas</h1>
+      <p>Luminar Studio, el estudio creativo de <strong>Luis Javier Arboláez Abreu</strong>, especializado en logotipos, carteles, tarjetas y branding para emprendedores en Cuba. Diseño con alma, estrategia y elegancia.</p>
       <a href="https://wa.me/5358363310" class="btn-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i> Solicita tu diseño hoy
+        <i class="fab fa-whatsapp"></i> Cotiza tu proyecto
       </a>
     </div>
   </section>
@@ -395,27 +444,27 @@
   <!-- Servicios -->
   <section id="servicios" class="services">
     <h2>Nuestros servicios</h2>
-    <p>Diseño profesional con enfoque estratégico y estético, pensado para hacer crecer tu marca.</p>
+    <p>Transformamos ideas en identidades visuales memorables, coherentes y estratégicas.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-crown"></i></div>
-        <h3>Logotipos Premium</h3>
-        <p>Únicos, memorables y listos para cualquier formato.</p>
+        <h3>Logotipos Únicos</h3>
+        <p>Diseños originales, vectoriales y adaptables a cualquier soporte.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-store"></i></div>
-        <h3>Cartelería Impactante</h3>
-        <p>Para tiendas, eventos y espacios públicos.</p>
+        <div class="service-icon"><i class="fas fa-store-alt"></i></div>
+        <h3>Cartelería Comercial</h3>
+        <p>Impactante y funcional para tiendas, eventos y locales.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-id-card"></i></div>
-        <h3>Tarjetas de Presentación</h3>
-        <p>Elegancia en cada contacto.</p>
+        <div class="service-icon"><i class="fas fa-id-card-alt"></i></div>
+        <h3>Tarjetas Profesionales</h3>
+        <p>Elegancia que impresiona en cada encuentro.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon"><i class="fas fa-palette"></i></div>
-        <h3>Branding Completo</h3>
-        <p>Identidad visual coherente y poderosa.</p>
+        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Branding Integral</h3>
+        <p>Identidad completa: logo, manual, papelería y más.</p>
       </div>
     </div>
   </section>
@@ -443,19 +492,19 @@
 
   <!-- Testimonios -->
   <section id="testimonios" class="testimonials">
-    <h2>Lo que dicen nuestros clientes</h2>
+    <h2>Testimonios de Clientes</h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
-        <p class="testimonial-text">"Mi marca cambió por completo. El logo transmite exactamente lo que quería: elegancia y confianza."</p>
-        <div class="testimonial-author">— María G., Dueña de Boutique</div>
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">"Gracias a Luminar Studio, mi negocio <strong>Checo's Family</strong> ahora tiene una identidad que refleja nuestra esencia: familiar, cálida y confiable. ¡Los recomiendo 100%!"</p>
+        <div class="testimonial-author">Tania Arboláez</div>
+        <div class="business-name">Dueña – Checo's Family</div>
       </div>
       <div class="testimonial-card">
-        <p class="testimonial-text">"Entrega rápida, excelente comunicación y un diseño que superó mis expectativas. 100% recomendado."</p>
-        <div class="testimonial-author">— Carlos R., Emprendedor</div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">"Finalmente tengo una identidad visual que me representa. ¡Gracias, Luis Javier!"</p>
-        <div class="testimonial-author">— Tienda 'La Esquina' – Santa Clara</div>
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <p class="testimonial-text">"Mi marca <strong>Chuly Pam Pam</strong> pasó de lo genérico a lo extraordinario. Luis Javier captó exactamente la vibra que quería. ¡Diseño con corazón y profesionalismo!"</p>
+        <div class="testimonial-author">Melisa Gumá</div>
+        <div class="business-name">Emprendedora – Chuly Pam Pam</div>
       </div>
     </div>
   </section>
@@ -463,17 +512,18 @@
   <!-- Sobre mí -->
   <section id="sobre-mi" class="about">
     <h2>Por Luis Javier Arboláez Abreu</h2>
-    <p>Diseñador gráfico con más de 5 años de experiencia en identidad visual. Creo que cada marca es una historia que merece ser contada con arte, estrategia y pasión por los detalles.</p>
-    <p>Mis diseños no solo se ven bien: funcionan, conectan y venden.</p>
-    <p class="owner-name">📍 Santa Clara, Villa Clara, Cuba</p>
-    <a href="https://wa.me/5358363310" class="social-link" target="_blank">
+    <p>Diseñador gráfico apasionado por construir marcas auténticas. Cada proyecto es una oportunidad para contar una historia visual que conecta, inspira y vende.</p>
+    <p>Mis diseños nacen del diálogo, la investigación y el amor por los detalles que marcan la diferencia.</p>
+    <div class="owner-name">Luis Javier Arboláez Abreu</div>
+    <div class="location">📍 Santa Clara, Villa Clara, Cuba</div>
+    <a href="https://wa.me/5358363310" class="contact-link" target="_blank">
       <i class="fab fa-whatsapp"></i> +53 5 8363310
     </a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>Luminar Studio — Diseño que ilumina tu marca</p>
+    <p>Luminar Studio — Diseño con propósito y elegancia</p>
     <div class="copyright">
       Sitio web creado por <strong>Isaac Veitia</strong>. © 2025 Todos los derechos reservados.
     </div>
@@ -484,43 +534,7 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
   <script>
-    // Configuración de partículas
-    tsParticles.load("particles-js", {
-      fpsLimit: 60,
-      particles: {
-        number: { value: 60, density: { enable: true, value_area: 800 } },
-        color: { value: "#d4af37" },
-        shape: { type: "circle" },
-        opacity: { value: 0.2, random: true },
-        size: { value: 2, random: true },
-        move: {
-          enable: true,
-          speed: 0.8,
-          direction: "none",
-          random: true,
-          straight: false,
-          out_mode: "out",
-          bounce: false
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" },
-          resize: true
-        },
-        modes: {
-          repulse: { distance: 100, duration: 0.4 },
-          push: { particles_nb: 2 }
-        }
-      },
-      retina_detect: true
-    });
-
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -538,4 +552,4 @@
 </body>
 </html>
 
-                                        
+  
