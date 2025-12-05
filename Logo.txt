@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marca Clara · Diseño que habla por tu negocio</title>
+  <meta name="description" content="Diseño gráfico profesional en Santa Clara: logotipos, tarjetas, carteles y branding. WhatsApp: +53 6379 2628.">
+  
+  <!-- Tailwind CSS v4 (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons (ligeros y modernos) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            primary: '#2563eb',
+            secondary: '#0f172a',
+            accent: '#ec4899',
+            light: '#f8fafc',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .btn-hover-glow {
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      transition: all 0.3s ease;
+    }
+    .btn-hover-glow:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
+    }
+    .review-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    }
+    .icon-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-slate-200">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div>
+        <div class="text-lg font-bold text-primary">Marca Clara</div>
+        <div class="text-xs text-slate-500 mt-0.5">Diseño que habla por tu negocio</div>
+      </div>
+      <a 
+        href="https://wa.me/5363792628?text=Hola%2C%20quiero%20dise%C3%B1ar%20la%20identidad%20de%20mi%20negocio" 
+        target="_blank"
+        class="bg-primary hover:bg-blue-700 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2 btn-hover-glow"
+      >
+        <i data-lucide="message-circle" class="w-4 h-4"></i> Cotizar
+      </a>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <!-- Hero -->
+    <section class="py-10 md:py-16 fade-in" id="hero">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
+          Logotipos, tarjetas y carteles que generan <span class="text-primary">confianza</span> y clientes.
+        </h1>
+        <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+          Soy Isaac Veitia, diseñador gráfico en Santa Clara. Ayudo a emprendedores y negocios locales a construir una identidad visual clara, moderna y profesional —sin plantillas genéricas.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a 
+            href="https://wa.me/5363792628" 
+            target="_blank"
+            class="bg-primary text-white px-7 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors btn-hover-glow"
+          >
+            <i data-lucide="smartphone" class="w-4 h-4 inline mr-1.5"></i> Hablar por WhatsApp
+          </a>
+          <a 
+            href="#servicios" 
+            class="border border-slate-300 text-slate-700 px-7 py-3.5 rounded-lg font-medium hover:bg-slate-50 transition-colors flex items-center justify-center"
+          >
+            <i data-lucide="palette" class="w-4 h-4 mr-1.5"></i> Ver servicios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Servicios de diseño</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Cada pieza se diseña pensando en tu negocio, tu cliente ideal y tu mensaje.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-slate-50 p-7 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 text-primary">
+            <i data-lucide="type" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Logotipos únicos</h3>
+          <p class="text-slate-600">
+            Diseño desde cero, con identidad propia, escalable y adaptable a cualquier formato: impresión, redes, WhatsApp.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 text-primary">
+            <i data-lucide="id-card" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Tarjetas de presentación</h3>
+          <p class="text-slate-600">
+            Elegantes, con información clara y alineadas a tu marca. Listas para imprimir en cualquier imprenta de Santa Clara.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 p-7 rounded-xl border border-slate-200 hover:border-primary transition-colors">
+          <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 text-primary">
+            <i data-lucide="megaphone" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Carteles y promociones</h3>
+          <p class="text-slate-600">
+            Para eventos, ofertas, menús o redes sociales. Diseñados para captar atención en segundos y transmitir tu mensaje.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="py-16 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Clientes satisfechos en Santa Clara</h2>
+        <p class="text-slate-600">Palabras reales de emprendedores que ya tienen su identidad visual lista.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Reseña 1 -->
+        <div class="review-card bg-white p-6 rounded-xl border border-slate-200">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+          </div>
+          <p class="text-slate-700 italic mb-4">"¡Mi cafetería ahora luce profesional! El logo y las tarjetas que me hizo Isaac me han traído más clientes desde el primer día."</p>
+          <div class="font-medium">Tania Arboláez</div>
+          <div class="text-sm text-slate-500">Dueña de “Café La Esquina” – Santa Clara</div>
+        </div>
+
+        <!-- Reseña 2 -->
+        <div class="review-card bg-white p-6 rounded-xl border border-slate-200">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+          </div>
+          <p class="text-slate-700 italic mb-4">"Diseñó la identidad completa para mi taller mecánico. Todo coordinado: logo, cartel, redes. ¡Mis clientes me dicen que se ve más serio!"</p>
+          <div class="font-medium">Reynier Pérez</div>
+          <div class="text-sm text-slate-500">Taller “Solución Rápida” – Santa Clara</div>
+        </div>
+
+        <!-- Reseña 3 -->
+        <div class="review-card bg-white p-6 rounded-xl border border-slate-200">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-400 flex">
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+            </div>
+          </div>
+          <p class="text-slate-700 italic mb-4">"En 2 días tenía mi logo y tarjetas listas. Ajustó todo hasta que quedé 100% satisfecha. Muy profesional y rápido."</p>
+          <div class="font-medium">Yarielis Martínez</div>
+          <div class="text-sm text-slate-500">Pastelería “Dulzura Clara” – Santa Clara</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="py-16 bg-slate-50 rounded-3xl px-6 fade-in">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Así trabajamos</h2>
+        <p class="text-slate-600 mb-10">
+          Simple, rápido y sin complicaciones. Solo necesitas WhatsApp y una idea clara.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 text-left">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="text-2xl font-bold text-primary mb-3">
+              <i data-lucide="message-square" class="w-6 h-6 inline mr-2"></i> 1
+            </div>
+            <h3 class="font-semibold mb-2">Nos contactas</h3>
+            <p class="text-slate-600 text-sm">
+              Me escribes por WhatsApp con el nombre de tu negocio y qué necesitas.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="text-2xl font-bold text-primary mb-3">
+              <i data-lucide="edit" class="w-6 h-6 inline mr-2"></i> 2
+            </div>
+            <h3 class="font-semibold mb-2">Diseño y ajustes</h3>
+            <p class="text-slate-600 text-sm">
+              Te envío una propuesta visual. Hacemos ajustes ilimitados hasta que estés 100% satisfecho.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="text-2xl font-bold text-primary mb-3">
+              <i data-lucide="download" class="w-6 h-6 inline mr-2"></i> 3
+            </div>
+            <h3 class="font-semibold mb-2">Entrega final</h3>
+            <p class="text-slate-600 text-sm">
+              Recibes los archivos listos para imprimir y usar en redes. En menos de 72h.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 fade-in">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">¿Listo para darle identidad a tu negocio?</h2>
+        <p class="text-slate-600 mb-8">
+          Escríbeme con el nombre de tu negocio y qué necesitas. Te responderé en minutos.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-slate-50 p-7 rounded-xl border border-slate-200">
+            <h3 class="font-semibold text-lg mb-4 flex items-center justify-center gap-2">
+              <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i> Contacto
+            </h3>
+            <ul class="text-left space-y-3 text-slate-700">
+              <li class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-primary mt-0.5 flex-shrink-0"></i>
+                <span>Santa Clara, Villa Clara, Cuba</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                <a href="tel:+5363792628" class="hover:underline">+53 6379-2628</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="message-circle" class="w-5 h-5 text-primary"></i>
+                <a href="https://wa.me/5363792628" target="_blank" class="hover:underline">Escribir por WhatsApp</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                <span>Respuesta rápida · Horario flexible</span>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-slate-50 p-7 rounded-xl border border-slate-200">
+            <h3 class="font-semibold text-lg mb-4 flex items-center justify-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5 text-primary"></i> ¿Por qué conmigo?
+            </h3>
+            <ul class="text-left space-y-2 text-slate-700 text-sm">
+              <li class="flex items-start gap-2">
+                <i data-lucide="circle-check" class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"></i>
+                <span>No uso plantillas genéricas</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="circle-check" class="w-4 h-4 text-green-500 mt-0.5"></i>
+                <span>Entregas en menos de 72 horas</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="circle-check" class="w-4 h-4 text-green-500 mt-0.5"></i>
+                <span>Archivos listos para imprenta y redes</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="circle-check" class="w-4 h-4 text-green-500 mt-0.5"></i>
+                <span>Ajustes ilimitados hasta tu satisfacción</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="circle-check" class="w-4 h-4 text-green-500 mt-0.5"></i>
+                <span>Conozco el mercado local de Santa Clara</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a 
+            href="https://wa.me/5363792628?text=Hola%2C%20quiero%20dise%C3%B1ar%20mi%20material%20de%20marketing" 
+            target="_blank"
+            class="inline-block bg-primary text-white px-8 py-3.5 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md btn-hover-glow"
+          >
+            <i data-lucide="message-circle" class="w-4 h-4 inline mr-2"></i> Iniciar conversación por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-8 text-center text-slate-500 text-sm">
+    <div class="container mx-auto px-4">
+      <p>© <span id="year"></span> Marca Clara · Diseño gráfico hecho en Santa Clara, Cuba</p>
+      <p class="mt-1">Sitio web desarrollado por Isaac Veitia. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Inyectar íconos de Lucide
+    lucide.createIcons();
+    
+    // Año automático
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Animación al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+
