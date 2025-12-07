@@ -1,579 +1,1855 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Betty's Scent | Perfumes Originales</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marca Clara | Diseño de Marcas para Negocios en Santa Clara, Cuba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Nueva paleta de colores basada en la imagen */
+        :root {
+            --primary: #150077;      /* Azul oscuro elegante */
+            --secondary: #256698;    /* Azul medio profesional */
+            --accent: #f72585;       /* Rosa para acentos */
+            --light: #f8f9fa;        /* Fondo claro */
+            --dark: #0a0a2a;         /* Casi negro azulado */
+            --gray: #6c757d;         /* Gris neutral */
+            --light-gray: #e9ecef;   /* Gris muy claro */
+            --text-dark: #333333;    /* Texto principal */
+            --text-light: #ffffff;   /* Texto claro */
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
 
-    :root {
-      --black: #0f0f0f;
-      --gold: #d4af37;
-      --pink: #f8d7da;
-      --rose: #f4c2c2;
-      --white: #ffffff;
-      --light: #fdf9f9;
-      --gray: #888888;
-      --transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--black);
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 800;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
 
-    section {
-      padding: 7rem 5%;
-    }
+        /* Tipografía elegante */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
 
-    /* --- Header --- */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1.2rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      background: rgba(15, 15, 15, 0.96);
-      color: var(--white);
-    }
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
 
-    .logo {
-      font-size: 1.9rem;
-      font-weight: 800;
-      color: var(--gold);
-    }
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -8px;
+            left: 0;
+        }
 
-    .cart-icon {
-      position: relative;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: var(--white);
-    }
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
 
-    .cart-count {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background: var(--gold);
-      color: var(--black);
-      font-size: 0.7rem;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.8rem;
-    }
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
 
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      font-weight: 500;
-    }
+        .section {
+            padding: 5rem 0;
+        }
 
-    nav a:hover {
-      color: var(--gold);
-    }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
 
-    /* --- Hero --- */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 7rem;
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1596468842819-2cdeal2d8c99?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      position: relative;
-    }
+        .section-title h2 {
+            margin-bottom: 1.5rem;
+        }
 
-    .hero-content {
-      max-width: 700px;
-    }
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    .hero h1 {
-      font-size: 3.8rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.1;
-    }
+        /* Botones elegantes */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.9rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      line-height: 1.7;
-    }
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: var(--transition);
+        }
 
-    .btn-shop {
-      display: inline-block;
-      padding: 0.9rem 2.4rem;
-      background: var(--gold);
-      color: var(--black);
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: var(--transition);
-      font-size: 1.1rem;
-    }
+        .btn:hover:before {
+            left: 100%;
+        }
 
-    .btn-shop:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
-    }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
 
-    /* --- Productos --- */
-    .products {
-      padding: 6rem 5%;
-      background: var(--white);
-    }
+        .btn-primary:hover {
+            background: #0f0055;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
 
-    .section-title {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 3.5rem;
-    }
+        .btn-secondary {
+            background: var(--secondary);
+            color: white;
+        }
 
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2.5rem;
-    }
+        .btn-secondary:hover {
+            background: #1d4f7a;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
 
-    .product-card {
-      background: var(--light);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-      transition: var(--transition);
-    }
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
 
-    .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
 
-    .product-img {
-      height: 220px;
-      background: #f0e6e6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: var(--rose);
-    }
+        /* Header elegante */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(21, 0, 119, 0.1);
+            backdrop-filter: blur(10px);
+        }
 
-    .product-info {
-      padding: 1.4rem;
-      text-align: center;
-    }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .product-info h3 {
-      margin-bottom: 0.6rem;
-    }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: -0.5px;
+        }
 
-    .product-price {
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
+        .logo span {
+            color: var(--secondary);
+        }
 
-    .btn-add {
-      background: var(--black);
-      color: var(--white);
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: var(--transition);
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
 
-    .btn-add:hover {
-      background: var(--gold);
-      color: var(--black);
-    }
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.3rem 0;
+        }
 
-    /* --- Testimonios --- */
-    .testimonials {
-      padding: 6rem 5%;
-      background: #0f0f0f;
-      color: white;
-      text-align: center;
-    }
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
 
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+        .nav-links a:hover:after {
+            width: 100%;
+        }
 
-    .testimonial-card {
-      background: rgba(255,255,255,0.05);
-      padding: 2rem;
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-    }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
 
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 1.2rem;
-      line-height: 1.7;
-    }
+        /* Hero elegante */
+        .hero {
+            padding: 9rem 0 5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .testimonial-author {
-      font-weight: 600;
-      color: var(--gold);
-    }
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
+            opacity: 0.1;
+        }
 
-    /* --- Carrito Modal --- */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-    }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
 
-    .modal-content {
-      background: white;
-      width: 90%;
-      max-width: 600px;
-      border-radius: 16px;
-      padding: 2.5rem;
-      position: relative;
-    }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
 
-    .close-modal {
-      position: absolute;
-      top: 1rem;
-      right: 1.2rem;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: var(--gray);
-    }
+        .hero h1 span {
+            color: #ffd700;
+        }
 
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #eee;
-    }
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
 
-    .form-group {
-      margin: 1.2rem 0;
-    }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-weight: 600;
-    }
+        /* Servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-    .form-group input {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .btn-send {
-      width: 100%;
-      padding: 1rem;
-      background: #25D366;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--secondary);
+        }
 
-    .btn-send:hover {
-      background: #128C7E;
-    }
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
 
-    /* --- Footer --- */
-    footer {
-      background: var(--black);
-      color: #aaa;
-      padding: 3rem 5% 2rem;
-      text-align: center;
-      font-size: 0.95rem;
-    }
+        .service-card:hover .service-icon {
+            color: var(--secondary);
+            transform: scale(1.1);
+            transition: var(--transition);
+        }
 
-    .copyright {
-      margin-top: 1.5rem;
-      color: #666;
-    }
+        /* PORTFOLIO MEJORADO - Textos más legibles */
+        .portfolio {
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
 
-    /* --- Responsive --- */
-    @media (max-width: 768px) {
-      nav ul { display: none; }
-      .hero h1 { font-size: 2.6rem; }
-      .hero { padding-top: 6rem; }
-      section { padding: 5rem 5%; }
-    }
-  </style>
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+
+        /* OVERLAY MEJORADO - Mejor contraste */
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 42, 0.85); /* Fondo más oscuro para mejor contraste */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: var(--transition);
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-category {
+            background: var(--secondary); /* Usar el azul secundario en lugar de transparente */
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .portfolio-overlay h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        /* PRECIOS ACTUALIZADOS - Sin soporte */
+        .pricing {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .exchange-rate {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            max-width: 500px;
+            margin: 0 auto 3rem;
+        }
+
+        .exchange-rate p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .rate-highlight {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 3rem;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .pricing-cup {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .pricing-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .pricing-features li.not-included {
+            color: var(--gray);
+        }
+
+        .pricing-features li.not-included:before {
+            content: '✗';
+            color: #ccc;
+        }
+
+        /* Proceso */
+        .process {
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            transition: var(--transition);
+        }
+
+        .step:hover .step-number {
+            background: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        /* Reseñas */
+        .testimonials {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            border-left: 4px solid var(--primary);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 4rem;
+            color: var(--light-gray);
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--primary);
+        }
+
+        .author-info p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            margin-top: 0.5rem;
+        }
+
+        /* Contacto */
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--light-gray);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(37, 102, 152, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--secondary);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* FOOTER ELEGANTE */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 5rem 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="rgba(255,255,255,0.05)"/></svg>');
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            display: block;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .footer-contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-contact-item i {
+            color: var(--secondary);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+
+        .footer-column ul li a:before {
+            content: '→';
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover:before {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+
+        /* Botón flotante WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 20px 10px rgba(37, 211, 102, 0.3);
+            }
+            100% {
+                box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                gap: 2rem;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+            
+            .step {
+                min-width: 100%;
+            }
+            
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.8rem;
+            }
+            
+            .service-card, .testimonial-card, .pricing-card {
+                padding: 1.5rem;
+            }
+            
+            footer {
+                padding: 3rem 0 1.5rem;
+            }
+            
+            .pricing-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">Betty's<span> Scent</span></div>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#perfumes">Perfumes</a></li>
-        <li><a href="#reseñas">Reseñas</a></li>
-      </ul>
-    </nav>
-    <div class="cart-icon" id="cartIcon">
-      <i class="fas fa-shopping-bag"></i>
-      <span class="cart-count" id="cartCount">0</span>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h1>Perfumes originales que enamoran</h1>
-      <p>Betty's Scent te trae las fragancias más exclusivas y duraderas, directo a tu puerta en Santa Clara y toda Cuba.</p>
-      <a href="#perfumes" class="btn-shop">Descubre nuestras fragancias</a>
-    </div>
-  </section>
-
-  <!-- Productos -->
-  <section id="perfumes" class="products">
-    <h2 class="section-title">Nuestras Fragancias</h2>
-    <div class="products-grid" id="productsGrid">
-      <!-- Los productos se cargarán con JS -->
-    </div>
-  </section>
-
-  <!-- Reseñas -->
-  <section id="reseñas" class="testimonials">
-    <h2 class="section-title">Reseñas de Nuestros Clientes</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-text">"¡El perfume 'Mariposa' es divino! Me dura todo el día y recibo cumplidos donde quiera que voy."</p>
-        <div class="testimonial-author">— Ana L., Santa Clara</div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">"Compré 'El Impacto' y es exactamente como en las tiendas internacionales. Aroma potente y elegante."</p>
-        <div class="testimonial-author">— Rafael M., Camajuaní</div>
-      </div>
-      <div class="testimonial-card">
-        <p class="testimonial-text">"Entrega rápida, perfume original y envase impecable. ¡Ya soy cliente fiel!"</p>
-        <div class="testimonial-author">— Yariel G., Remedios</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Betty's Scent — Fragancias originales para almas únicas</p>
-    <p>📍 Santa Clara, Villa Clara, Cuba | 📞 +53 5 8363310</p>
-    <div class="copyright">
-      &copy; 2025 Betty's Scent. Todos los derechos reservados.
-    </div>
-  </footer>
-
-  <!-- Modal del Carrito -->
-  <div class="modal" id="cartModal">
-    <div class="modal-content">
-      <span class="close-modal" id="closeModal">&times;</span>
-      <h2>Carrito de Compras</h2>
-      <div id="cartItems"></div>
-      <div style="margin: 1.2rem 0; font-weight: 700; font-size: 1.2rem;">
-        Total: <span id="cartTotal">$0.00</span>
-      </div>
-      <p style="font-size: 0.9rem; color: var(--gray); margin-bottom: 1.2rem;">
-        Al enviar, tu pedido se enviará a WhatsApp.
-      </p>
-      <div class="form-group">
-        <label for="customerName">Nombre completo</label>
-        <input type="text" id="customerName" placeholder="Ej: María Pérez">
-      </div>
-      <div class="form-group">
-        <label for="customerAddress">Dirección de entrega</label>
-        <input type="text" id="customerAddress" placeholder="Reparto, calle, número">
-      </div>
-      <div class="form-group">
-        <label for="customerPhone">Teléfono (opcional)</label>
-        <input type="text" id="customerPhone" placeholder="Para confirmar entrega">
-      </div>
-      <button class="btn-send" id="sendOrder">Enviar Pedido por WhatsApp</button>
-    </div>
-  </div>
-
-  <script>
-    // Datos de los perfumes
-    const perfumes = [
-      { id: 1, name: "El Impacto", price: 25, icon: "✨" },
-      { id: 2, name: "Mariposa", price: 22, icon: "🦋" },
-      { id: 3, name: "El Camerata", price: 28, icon: "🎻" },
-      { id: 4, name: "Voltaje", price: 24, icon: "⚡" }
-    ];
-
-    let cart = JSON.parse(localStorage.getItem('bettyCart')) || [];
-
-    // Renderizar productos
-    const productsGrid = document.getElementById('productsGrid');
-    perfumes.forEach(p => {
-      productsGrid.innerHTML += `
-        <div class="product-card">
-          <div class="product-img">${p.icon}</div>
-          <div class="product-info">
-            <h3>${p.name}</h3>
-            <div class="product-price">$${p.price} CUC</div>
-            <button class="btn-add" onclick="addToCart(${p.id})">Añadir al carrito</button>
-          </div>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#hero" class="logo">
+                    <i class="fas fa-palette"></i> Marca<span>Clara</span>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-      `;
-    });
+    </header>
 
-    // Añadir al carrito
-    function addToCart(id) {
-      const item = perfumes.find(p => p.id === id);
-      const existing = cart.find(item => item.id === id);
-      if (existing) {
-        existing.quantity++;
-      } else {
-        cart.push({ ...item, quantity: 1 });
-      }
-      saveCart();
-      updateCartUI();
-    }
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Diseño de Marcas que <span>Impulsan Negocios</span> en Santa Clara</h1>
+                <p>
+                    Especialistas en crear identidades visuales memorables para tiendas, cafeterías, 
+                    restaurantes y mipymes. Transformamos tu visión en una marca poderosa que conecta 
+                    con clientes y genera resultados.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#precios" class="btn btn-primary">
+                        <i class="fas fa-tags"></i> Ver Precios
+                    </a>
+                    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20vi%20tu%20página%20web%20y%20quiero%20información%20sobre%20tus%20servicios%20de%20diseño" 
+                       class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Guardar en localStorage
-    function saveCart() {
-      localStorage.setItem('bettyCart', JSON.stringify(cart));
-    }
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones de diseño integral para potenciar tu negocio</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Logotipos Profesionales</h3>
+                    <p>Diseñamos logos únicos que representan la esencia de tu negocio y destacan en el mercado.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Investigación de mercado</li>
+                        <li>3 propuestas de diseño</li>
+                        <li>Archivos vectoriales</li>
+                        <li>Guía de uso básica</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Menús para Restaurantes</h3>
+                    <p>Diseños atractivos y funcionales que resaltan tus platillos y mejoran la experiencia del cliente.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Diseño de carta principal</li>
+                        <li>Menú digital</li>
+                        <li>Señalética interior</li>
+                        <li>Especialización gastronómica</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Tarjetas de Presentación</h3>
+                    <p>Tarjetas profesionales que dejan una impresión duradera y facilitan el networking.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Diseño personalizado</li>
+                        <li>Asesoría en papelería</li>
+                        <li>Formatos estándar</li>
+                        <li>Archivos listos para imprimir</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="services-grid" style="margin-top: 2rem;">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Carteles Publicitarios</h3>
+                    <p>Diseños impactantes que captan atención y comunican efectivamente promociones y eventos.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Carteles para interiores</li>
+                        <li>Vallas publicitarias</li>
+                        <li>Flyers promocionales</li>
+                        <li>Diseños para redes sociales</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Identidad Visual Completa</h3>
+                    <p>Desarrollo de toda la identidad de tu marca, desde logo hasta aplicaciones en diferentes soportes.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Manual de identidad</li>
+                        <li>Paleta de colores</li>
+                        <li>Tipografía corporativa</li>
+                        <li>Aplicaciones prácticas</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Diseño Digital</h3>
+                    <p>Contenido visual para redes sociales y web que fortalece tu presencia online.</p>
+                    <ul style="color: #555; margin-top: 1rem; padding-left: 1.2rem;">
+                        <li>Plantillas para redes</li>
+                        <li>Banners web</li>
+                        <li>Stories para Instagram</li>
+                        <li>Portadas para Facebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Actualizar contador y UI
-    function updateCartUI() {
-      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-      document.getElementById('cartCount').textContent = count;
-    }
+    <!-- Portafolio Mejorado -->
+    <section class="section portfolio" id="portafolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Portafolio</h2>
+                <p>Ejemplos reales de nuestros trabajos para clientes en Santa Clara</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="logos">Logotipos</button>
+                <button class="filter-btn" data-filter="menus">Menús</button>
+                <button class="filter-btn" data-filter="tarjetas">Tarjetas</button>
+                <button class="filter-btn" data-filter="carteles">Carteles</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="logos">
+                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Logo para cafetería" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Logotipo</div>
+                        <h3>Cafetería "El Aroma"</h3>
+                        <p>Identidad completa + manual de marca</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="menus">
+                    <img src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Menú de restaurante" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Menú</div>
+                        <h3>Restaurante "La Casona"</h3>
+                        <p>Diseño de menú + señalética interior</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="tarjetas">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tarjetas de presentación" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Tarjetas</div>
+                        <h3>Boutique "Moda Clara"</h3>
+                        <p>Tarjetas premium + papelería corporativa</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="carteles">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cartel publicitario" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Cartel</div>
+                        <h3>Tienda "Variedades"</h3>
+                        <p>Cartelería + material promocional</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="logos">
+                    <img src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Logo para servicios" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Logotipo</div>
+                        <h3>Consultoría "Estrategia Plus"</h3>
+                        <p>Branding corporativo completo</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="menus">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Carta de restaurante" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-category">Menú</div>
+                        <h3>Cafetería "Dulce Tentación"</h3>
+                        <p>Diseño de carta + packaging para postres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Abrir carrito
-    document.getElementById('cartIcon').addEventListener('click', () => {
-      renderCartModal();
-      document.getElementById('cartModal').style.display = 'flex';
-    });
+    <!-- Precios Actualizados (sin soporte) -->
+    <section class="section pricing" id="precios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Precios</h2>
+                <p>Paquetes adaptados a cada necesidad y presupuesto</p>
+            </div>
+            
+            <div class="exchange-rate">
+                <p><strong>Tipo de cambio actual:</strong> 1 USD = 440 CUP</p>
+                <p class="rate-highlight">Precios actualizados al día de hoy</p>
+                <p><small>*Los precios en pesos cubanos pueden variar según el tipo de cambio</small></p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Paquete Básico - $40 USD -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Paquete Básico</h3>
+                        <div class="pricing-price">$40<span> USD</span></div>
+                        <div class="pricing-cup">≈ 17,600 CUP</div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>Diseño de logotipo básico</li>
+                        <li>2 propuestas iniciales</li>
+                        <li>2 revisiones incluidas</li>
+                        <li>Archivos PNG y JPG</li>
+                        <li>Guía de uso básica</li>
+                        <li class="not-included">Archivos vectoriales</li>
+                        <li class="not-included">Diseño de tarjetas</li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn btn-secondary" style="width: 100%;">
+                        <i class="fas fa-shopping-cart"></i> Solicitar este Paquete
+                    </a>
+                </div>
+                
+                <!-- Paquete Profesional - $80 USD (RECOMENDADO) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MÁS POPULAR</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Paquete Profesional</h3>
+                        <div class="pricing-price">$80<span> USD</span></div>
+                        <div class="pricing-cup">≈ 35,200 CUP</div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>Diseño de logotipo profesional</li>
+                        <li>3 propuestas iniciales</li>
+                        <li>Revisiones ilimitadas</li>
+                        <li>Todos los archivos (PNG, JPG, PDF)</li>
+                        <li>Archivos vectoriales (AI, EPS)</li>
+                        <li>Diseño de tarjetas de presentación</li>
+                        <li>Guía de aplicación básica</li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-star"></i> Paquete Recomendado
+                    </a>
+                </div>
+                
+                <!-- Paquete Premium - $150 USD -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Paquete Premium</h3>
+                        <div class="pricing-price">$150<span> USD</span></div>
+                        <div class="pricing-cup">≈ 66,000 CUP</div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>Identidad visual completa</li>
+                        <li>5 propuestas iniciales</li>
+                        <li>Revisiones ilimitadas</li>
+                        <li>Todos los archivos (vector + raster)</li>
+                        <li>Manual de identidad visual</li>
+                        <li>Tarjetas + Papelería corporativa</li>
+                        <li>Diseño de menú o catálogo básico</li>
+                        <li>Asesoría para implementación</li>
+                    </ul>
+                    
+                    <a href="#contacto" class="btn btn-secondary" style="width: 100%;">
+                        <i class="fas fa-crown"></i> Solicitar Premium
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p><strong>Servicios individuales también disponibles:</strong></p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: var(--shadow); min-width: 200px;">
+                        <p style="margin: 0;"><strong>Diseño de Menú:</strong> $30-60 USD</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Según complejidad y páginas</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: var(--shadow); min-width: 200px;">
+                        <p style="margin: 0;"><strong>Tarjetas de Presentación:</strong> $20-40 USD</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Incluye diseño y archivos</p>
+                    </div>
+                    <div style="background: white; padding: 1rem; border-radius: 8px; box-shadow: var(--shadow); min-width: 200px;">
+                        <p style="margin: 0;"><strong>Carteles Publicitarios:</strong> $25-50 USD</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Diseño para impresión o digital</p>
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--gray);">
+                    *Los precios pueden variar según la complejidad del proyecto. ¡Contáctanos para un presupuesto personalizado!
+                </p>
+            </div>
+        </div>
+    </section>
 
-    document.getElementById('closeModal').addEventListener('click', () => {
-      document.getElementById('cartModal').style.display = 'none';
-    });
+    <!-- Proceso -->
+    <section class="section process" id="proceso">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestro Proceso</h2>
+                <p>Cómo trabajamos para garantizar el éxito de tu marca</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Consulta Inicial</h3>
+                    <p>Analizamos tu negocio, objetivos y audiencia para entender tus necesidades.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Diseño Conceptual</h3>
+                    <p>Desarrollamos propuestas creativas basadas en nuestra investigación.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Revisión Colaborativa</h3>
+                    <p>Trabajamos juntos para refinar los diseños hasta lograr la perfección.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Entrega Final</h3>
+                    <p>Entregamos todos los archivos y resolvemos dudas finales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Renderizar carrito en modal
-    function renderCartModal() {
-      const cartItems = document.getElementById('cartItems');
-      const cartTotal = document.getElementById('cartTotal');
-      
-      if (cart.length === 0) {
-        cartItems.innerHTML = '<p>Tu carrito está vacío.</p>';
-        cartTotal.textContent = '$0.00';
-        return;
-      }
+    <!-- Reseñas -->
+    <section class="section testimonials" id="reseñas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Reseñas de Clientes</h2>
+                <p>Lo que dicen emprendedores que confiaron en nosotros</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Marca Clara transformó completamente la imagen de mi cafetería. El diseño del menú y los carteles no solo son hermosos, sino que han aumentado mis ventas en un 30%."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">CM</div>
+                        <div class="author-info">
+                            <h4>Carlos Mendoza</h4>
+                            <p>Dueño de "Café Aroma"</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Excelente trabajo en el rediseño de nuestra identidad visual. Profesionales, puntuales y con gran atención al detalle. Totalmente recomendados para cualquier negocio en Santa Clara."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>María López</h4>
+                            <p>Gerente de "Boutique Elegancia"</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Contraté a Marca Clara para el diseño de mi restaurante nuevo. Desde el logo hasta los uniformes, todo quedó perfecto. Su conocimiento del mercado local es invaluable."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RG</div>
+                        <div class="author-info">
+                            <h4>Roberto González</h4>
+                            <p>Propietario de "Sabores Criollos"</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      let html = '';
-      let total = 0;
-      cart.forEach(item => {
-        const itemTotal = item.price * item.quantity;
-        total += itemTotal;
-        html += `
-          <div class="cart-item">
-            <div>${item.name} x${item.quantity}</div>
-            <div>$${itemTotal}</div>
-          </div>
-        `;
-      });
-      cartItems.innerHTML = html;
-      cartTotal.textContent = `$${total.toFixed(2)}`;
-    }
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <p>Envíanos tu proyecto y te responderemos en menos de 24 horas</p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Tipo de Negocio *</label>
+                        <select id="business" class="form-control" required>
+                            <option value="">Selecciona tu tipo de negocio</option>
+                            <option value="restaurant">Restaurante / Cafetería</option>
+                            <option value="cafe">Cafetería / Bar</option>
+                            <option value="store">Tienda / Retail</option>
+                            <option value="services">Servicios Profesionales</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Paquete o Servicio de Interés *</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="basico">Paquete Básico ($40 USD / 17,600 CUP)</option>
+                            <option value="profesional">Paquete Profesional ($80 USD / 35,200 CUP)</option>
+                            <option value="premium">Paquete Premium ($150 USD / 66,000 CUP)</option>
+                            <option value="menu">Diseño de Menú ($30-60 USD)</option>
+                            <option value="tarjetas">Tarjetas de Presentación ($20-40 USD)</option>
+                            <option value="carteles">Carteles Publicitarios ($25-50 USD)</option>
+                            <option value="personalizado">Presupuesto Personalizado</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Describe tu proyecto *</label>
+                        <textarea id="message" class="form-control" required placeholder="Cuéntanos sobre tu negocio, tus ideas y lo que esperas lograr con nuestro diseño..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
+                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+5363792628" style="color: var(--primary); text-decoration: none;">+53 6379 2628</a></p>
+                    <p style="color: #666; font-size: 0.9rem;">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Santa Clara, Cuba</p>
+                    <p style="color: #666; font-size: 0.9rem;">Servicios en toda la provincia y online</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Tiempo de Respuesta</h3>
+                    <p>Menos de 24 horas</p>
+                    <p style="color: #666; font-size: 0.9rem;">Consultas por WhatsApp atendidas más rápido</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // Enviar pedido por WhatsApp
-    document.getElementById('sendOrder').addEventListener('click', () => {
-      const name = document.getElementById('customerName').value.trim();
-      const address = document.getElementById('customerAddress').value.trim();
-      
-      if (!name || !address) {
-        alert('Por favor, ingresa tu nombre y dirección.');
-        return;
-      }
+    <!-- Footer Elegante -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="#" class="footer-logo">Marca<span>Clara</span></a>
+                    <p class="footer-description">
+                        Especialistas en diseño de marcas para negocios en Santa Clara, Cuba. 
+                        Creamos identidades visuales que destacan y conectan con clientes.
+                    </p>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santa Clara, Villa Clara, Cuba</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+53 6379 2628</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>isaacveitia750217@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Diseño de Logotipos</a></li>
+                        <li><a href="#servicios">Menús para Restaurantes</a></li>
+                        <li><a href="#servicios">Tarjetas de Presentación</a></li>
+                        <li><a href="#servicios">Carteles Publicitarios</a></li>
+                        <li><a href="#servicios">Identidad Visual</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Precios desde</h3>
+                    <ul>
+                        <li><strong>Básico:</strong> $40 USD / 17,600 CUP</li>
+                        <li><strong>Profesional:</strong> $80 USD / 35,200 CUP</li>
+                        <li><strong>Premium:</strong> $150 USD / 66,000 CUP</li>
+                        <li><strong>Servicios individuales:</strong> $20-60 USD</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Marca Clara. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart" style="color: #f72585;"></i> en Santa Clara, Cuba</p>
+                <p style="margin-top: 0.5rem;">Tel: +53 6379 2628 | WhatsApp disponible | Precios en USD y CUP</p>
+            </div>
+        </div>
+    </footer>
 
-      if (cart.length === 0) {
-        alert('Tu carrito está vacío.');
-        return;
-      }
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20quiero%20información%20sobre%20sus%20servicios%20de%20diseño" 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-      let message = `¡Hola! Quisiera hacer un pedido en Betty's Scent:\n\n`;
-      cart.forEach(item => {
-        message += `- ${item.name} x${item.quantity} ($${item.price} c/u)\n`;
-      });
-      const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-      message += `\nTotal: $${total.toFixed(2)} CUC\n\n`;
-      message += `Cliente: ${name}\n`;
-      message += `Dirección: ${address}\n`;
-      
-      const phoneInput = document.getElementById('customerPhone').value.trim();
-      if (phoneInput) message += `Teléfono: ${phoneInput}\n`;
+    <script>
+        // Menú móvil
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Cerrar menú al hacer clic en enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Filtro de portafolio
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remover clase active de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Añadir clase active al botón clickeado
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Formulario a WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener datos del formulario
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const business = document.getElementById('business').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // Mapear valores a texto legible
+            const businessTypes = {
+                'restaurant': 'Restaurante / Cafetería',
+                'cafe': 'Cafetería / Bar',
+                'store': 'Tienda / Retail',
+                'services': 'Servicios Profesionales',
+                'other': 'Otro'
+            };
+            
+            const serviceTypes = {
+                'basico': 'Paquete Básico ($40 USD / 17,600 CUP)',
+                'profesional': 'Paquete Profesional ($80 USD / 35,200 CUP)',
+                'premium': 'Paquete Premium ($150 USD / 66,000 CUP)',
+                'menu': 'Diseño de Menú ($30-60 USD)',
+                'tarjetas': 'Tarjetas de Presentación ($20-40 USD)',
+                'carteles': 'Carteles Publicitarios ($25-50 USD)',
+                'personalizado': 'Presupuesto Personalizado'
+            };
+            
+            // Calcular conversión de precios
+            const exchangeRate = 440; // 1 USD = 440 CUP
+            const servicePrices = {
+                'basico': {usd: 40, cup: 40 * exchangeRate},
+                'profesional': {usd: 80, cup: 80 * exchangeRate},
+                'premium': {usd: 150, cup: 150 * exchangeRate}
+            };
+            
+            // Crear mensaje para WhatsApp
+            const whatsappMessage = `*Nueva solicitud de diseño - Marca Clara*
+            
+*Información del cliente:*
+• Nombre: ${name}
+• Teléfono: ${phone}
+• Tipo de negocio: ${businessTypes[business] || business}
+• Servicio solicitado: ${serviceTypes[service] || service}
 
-      const whatsappURL = `https://wa.me/5358363310?text=${encodeURIComponent(message)}`;
-      window.open(whatsappURL, '_blank');
+*Descripción del proyecto:*
+${message}
 
-      // Vaciar carrito
-      cart = [];
-      saveCart();
-      updateCartUI();
-      document.getElementById('cartModal').style.display = 'none';
-      alert('¡Pedido enviado! Revisa WhatsApp para confirmar.');
-    });
+${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} USD ≈ ${servicePrices[service].cup.toLocaleString()} CUP` : '*Precio:* Por determinar según requerimientos'}
 
-    // Inicializar
-    updateCartUI();
-  </script>
+*Este mensaje fue enviado desde el formulario de contacto de la página web.*`;
+            
+            // Codificar mensaje para URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // Redirigir a WhatsApp
+            window.open(`https://wa.me/5363792628?text=${encodedMessage}`, '_blank');
+            
+            // Mostrar confirmación
+            alert(`¡Gracias ${name}! Tu solicitud se ha enviado correctamente. Serás redirigido a WhatsApp para continuar la conversación.`);
+            
+            // Limpiar formulario
+            this.reset();
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(21, 0, 119, 0.15)';
+                header.style.padding = '0.8rem 0';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(21, 0, 119, 0.1)';
+                header.style.padding = '1rem 0';
+            }
+        });
+        
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Actualizar precios según cambio (puedes cambiar este valor)
+        function updateExchangeRate(newRate) {
+            const exchangeRate = newRate || 440;
+            const usdPrices = {basico: 40, profesional: 80, premium: 150};
+            
+            // Actualizar precios en CUP
+            document.querySelectorAll('.pricing-cup').forEach((element, index) => {
+                const usdPrice = Object.values(usdPrices)[index];
+                const cupPrice = usdPrice * exchangeRate;
+                element.textContent = `≈ ${cupPrice.toLocaleString()} CUP`;
+            });
+            
+            // Actualizar tipo de cambio mostrado
+            document.querySelector('.rate-highlight').textContent = `1 USD = ${exchangeRate} CUP`;
+            
+            // Actualizar opciones del formulario
+            const serviceOptions = document.querySelectorAll('#service option');
+            serviceOptions.forEach(option => {
+                if (option.value === 'basico') {
+                    option.textContent = `Paquete Básico ($40 USD / ${(40*exchangeRate).toLocaleString()} CUP)`;
+                } else if (option.value === 'profesional') {
+                    option.textContent = `Paquete Profesional ($80 USD / ${(80*exchangeRate).toLocaleString()} CUP)`;
+                } else if (option.value === 'premium') {
+                    option.textContent = `Paquete Premium ($150 USD / ${(150*exchangeRate).toLocaleString()} CUP)`;
+                }
+            });
+        }
+        
+        // Inicializar con el tipo de cambio actual
+        updateExchangeRate(440);
+    </script>
 </body>
 </html>
-
