@@ -11,18 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1b517d;
-            --secondary: #c43462;
-            --accent: #ff9f1c;
+            --primary: #1b365D;
+            --secondary: #E31C79;
+            --accent: #298FC2;
             --light: #f8f9fa;
-            --dark: #0d2a40;
+            --dark: #0d1e36;
             --gray: #6c757d;
             --light-gray: #e9ecef;
             --text-dark: #2d3748;
             --text-light: #ffffff;
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-            --shadow: 0 10px 30px rgba(27, 81, 125, 0.08);
-            --shadow-hover: 0 20px 40px rgba(27, 81, 125, 0.15);
+            --shadow: 0 10px 30px rgba(27, 54, 93, 0.08);
+            --shadow-hover: 0 20px 40px rgba(27, 54, 93, 0.15);
             --radius: 12px;
             --radius-sm: 8px;
         }
@@ -155,25 +155,36 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, #2a6fa3 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #2a5c9c 100%);
             color: white;
         }
 
         .btn-primary:hover {
-            background: linear-gradient(135deg, #154266 0%, var(--primary) 100%);
+            background: linear-gradient(135deg, #142a4a 0%, var(--primary) 100%);
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
         }
 
         .btn-secondary {
-            background: linear-gradient(135deg, var(--secondary) 0%, #e84c88 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, #f0418c 100%);
             color: white;
         }
 
         .btn-secondary:hover {
-            background: linear-gradient(135deg, #a82c54 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, #c51765 0%, var(--secondary) 100%);
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent) 0%, #3aa0d8 100%);
+            color: white;
+        }
+
+        .btn-accent:hover {
+            background: linear-gradient(135deg, #2376a3 0%, var(--accent) 100%);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(41, 143, 194, 0.3);
         }
 
         .btn-whatsapp {
@@ -198,7 +209,7 @@
             transition: var(--transition);
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            box-shadow: 0 5px 20px rgba(27, 81, 125, 0.08);
+            box-shadow: 0 5px 20px rgba(27, 54, 93, 0.08);
         }
 
         .navbar {
@@ -283,7 +294,7 @@
         /* Hero */
         .hero {
             padding: 12rem 0 7rem;
-            background: linear-gradient(135deg, #0d2a40 0%, var(--primary) 50%, #1b517d 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, #1b365D 100%);
             color: white;
             position: relative;
             overflow: hidden;
@@ -363,6 +374,133 @@
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+        }
+
+        /* Carrusel de Proyectos */
+        .carousel-section {
+            background: linear-gradient(to bottom, var(--light) 0%, #ffffff 100%);
+            padding: 5rem 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 500px;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(27, 54, 93, 0.9), rgba(27, 54, 93, 0.7));
+            color: white;
+            padding: 2rem;
+            transform: translateY(0);
+            transition: var(--transition);
+        }
+
+        .carousel-category {
+            background: var(--secondary);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: white;
+            display: inline-block;
+        }
+
+        .carousel-caption h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .carousel-caption p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 2rem;
+        }
+
+        .carousel-next {
+            right: 2rem;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-dot.active {
+            background: var(--secondary);
+            transform: scale(1.2);
         }
 
         /* Servicios */
@@ -514,7 +652,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(13, 42, 64, 0.95), rgba(13, 42, 64, 0.7));
+            background: linear-gradient(to top, rgba(13, 30, 54, 0.95), rgba(13, 30, 54, 0.7));
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -568,7 +706,7 @@
             box-shadow: var(--shadow);
             max-width: 600px;
             margin: 0 auto 4rem;
-            border: 2px solid rgba(27, 81, 125, 0.1);
+            border: 2px solid rgba(27, 54, 93, 0.1);
         }
 
         .exchange-rate p {
@@ -733,7 +871,7 @@
         .step-number {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, #2a6fa3 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #2a5c9c 100%);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -743,11 +881,11 @@
             font-weight: 800;
             margin: 0 auto 2rem;
             transition: var(--transition);
-            box-shadow: 0 10px 20px rgba(27, 81, 125, 0.2);
+            box-shadow: 0 10px 20px rgba(27, 54, 93, 0.2);
         }
 
         .step:hover .step-number {
-            background: linear-gradient(135deg, var(--secondary) 0%, #e84c88 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, #f0418c 100%);
             transform: scale(1.1) rotate(5deg);
         }
 
@@ -874,7 +1012,7 @@
         .form-control:focus {
             outline: none;
             border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(196, 52, 98, 0.15);
+            box-shadow: 0 0 0 3px rgba(227, 28, 121, 0.15);
         }
 
         .form-row {
@@ -1164,6 +1302,10 @@
             .step {
                 min-width: 250px;
             }
+
+            .carousel {
+                height: 400px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1240,6 +1382,24 @@
             .contact-form {
                 padding: 2.5rem 2rem;
             }
+
+            .carousel {
+                height: 350px;
+            }
+
+            .carousel-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .carousel-prev {
+                left: 1rem;
+            }
+
+            .carousel-next {
+                right: 1rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1296,6 +1456,24 @@
                 margin-bottom: 3rem;
                 padding: 1.2rem;
             }
+
+            .carousel {
+                height: 300px;
+            }
+
+            .carousel-caption {
+                padding: 1.5rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.2rem;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -1319,6 +1497,7 @@
                     <li><a href="#hero">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#portafolio">Portafolio</a></li>
+                    <li><a href="#carrusel">Proyectos</a></li>
                     <li><a href="#precios">Precios</a></li>
                     <li><a href="#proceso">Proceso</a></li>
                     <li><a href="#reseñas">Reseñas</a></li>
@@ -1349,6 +1528,9 @@
                 </div>
 
                 <div class="hero-buttons">
+                    <a href="#carrusel" class="btn btn-accent">
+                        <i class="fas fa-images"></i> Ver nuestros proyectos
+                    </a>
                     <a href="#precios" class="btn btn-primary">
                         <i class="fas fa-tags"></i> Ver paquetes y precios
                     </a>
@@ -1357,6 +1539,87 @@
                         <i class="fab fa-whatsapp"></i> Hablar por WhatsApp
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de Proyectos -->
+    <section class="carousel-section" id="carrusel">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Proyectos</h2>
+                <p>Una muestra de nuestro trabajo para clientes satisfechos</p>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel" id="projectCarousel">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide">
+                        <img src="carrucel01.jpg" alt="Proyecto de diseño 1" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="carousel-caption">
+                            <div class="carousel-category">Logotipo Profesional</div>
+                            <h3>Restaurante "El Sazón"</h3>
+                            <p>Diseño completo de identidad visual para restaurante familiar en Santa Clara.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <img src="carrucel02.jpg" alt="Proyecto de diseño 2" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="carousel-caption">
+                            <div class="carousel-category">Diseño de Menú</div>
+                            <h3>Cafetería "Aroma Café"</h3>
+                            <p>Menú atractivo y funcional que incrementó las ventas en un 30%.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <img src="carrucel03.jpg" alt="Proyecto de diseño 3" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="carousel-caption">
+                            <div class="carousel-category">Identidad Corporativa</div>
+                            <h3>Tienda de Moda "Elegante"</h3>
+                            <p>Desarrollo de marca completa con manual de identidad y aplicaciones.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <img src="carrucel04.jpg" alt="Proyecto de diseño 4" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="carousel-caption">
+                            <div class="carousel-category">Cartelería PVC</div>
+                            <h3>Promoción Especial</h3>
+                            <p>Carteles en PVC resistentes para promoción exterior de negocio local.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <img src="carrucel05.jpg" alt="Proyecto de diseño 5" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
+                        <div class="carousel-caption">
+                            <div class="carousel-category">Diseño Digital</div>
+                            <h3>Campaña Redes Sociales</h3>
+                            <p>Contenido visual para Instagram y Facebook que aumentó seguidores en un 200%.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-dots" id="carouselDots">
+                    <!-- Los puntos se generarán con JavaScript -->
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#portafolio" class="btn btn-secondary">
+                    <i class="fas fa-images"></i> Ver más proyectos en portafolio
+                </a>
             </div>
         </div>
     </section>
@@ -1958,6 +2221,7 @@
                         <li><a href="#hero">Inicio</a></li>
                         <li><a href="#servicios">Servicios</a></li>
                         <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#carrusel">Proyectos</a></li>
                         <li><a href="#precios">Precios</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
@@ -2023,6 +2287,58 @@
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
+        });
+
+        // Carrusel de proyectos
+        const carousel = document.getElementById('projectCarousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const carouselDots = document.getElementById('carouselDots');
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        // Crear puntos de navegación
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            carouselDots.appendChild(dot);
+        });
+        
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Actualizar puntos activos
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+        
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
+        }
+        
+        // Event listeners para botones
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+        
+        // Auto-play del carrusel
+        let carouselInterval = setInterval(nextSlide, 5000);
+        
+        // Pausar auto-play al interactuar
+        carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carousel.addEventListener('mouseleave', () => {
+            clearInterval(carouselInterval);
+            carouselInterval = setInterval(nextSlide, 5000);
         });
 
         // Filtro de portafolio
@@ -2111,10 +2427,10 @@ ${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} US
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
             if (window.scrollY > 50) {
-                header.style.boxShadow = '0 8px 30px rgba(27, 81, 125, 0.15)';
+                header.style.boxShadow = '0 8px 30px rgba(27, 54, 93, 0.15)';
                 header.style.padding = '0.8rem 0';
             } else {
-                header.style.boxShadow = '0 5px 20px rgba(27, 81, 125, 0.08)';
+                header.style.boxShadow = '0 5px 20px rgba(27, 54, 93, 0.08)';
                 header.style.padding = '1.2rem 0';
             }
         });
@@ -2180,7 +2496,7 @@ ${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} US
         }, observerOptions);
 
         // Observar elementos para animaciones
-        document.querySelectorAll('.service-card, .portfolio-item, .pricing-card, .testimonial-card, .step, .info-card').forEach(el => {
+        document.querySelectorAll('.service-card, .portfolio-item, .pricing-card, .testimonial-card, .step, .info-card, .carousel-slide').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
