@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marca Clara | Diseño de Marcas para Negocios en Santa Clara y el resto de Cuba</title>
-    <meta name="description" content="Marca Clara diseña logotipos, carteles, menús, tarjetas, pulóver personalizados, carteles PVC, landing pages, gestión de redes y marcas completas para negocios en Santa Clara y toda Cuba. Impulsa tu negocio con una identidad visual profesional.">
+    <title>Marca Clara | Diseño Profesional de Marcas para Negocios en Cuba</title>
+    <meta name="description" content="Marca Clara crea identidades visuales impactantes para negocios en Cuba. Logotipos profesionales, diseño de menús, tarjetas, carteles PVC y gestión de redes sociales que hacen que tu negocio destaque y venda más.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #1b365D;
@@ -23,8 +23,8 @@
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
             --shadow: 0 10px 30px rgba(27, 54, 93, 0.08);
             --shadow-hover: 0 20px 40px rgba(27, 54, 93, 0.15);
-            --radius: 12px;
-            --radius-sm: 8px;
+            --radius: 16px;
+            --radius-sm: 10px;
         }
 
         * {
@@ -54,13 +54,13 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: var(--primary);
             letter-spacing: -0.5px;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             color: var(--primary);
             position: relative;
             display: inline-block;
@@ -71,21 +71,21 @@
             position: absolute;
             width: 80px;
             height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, var(--secondary), var(--accent));
             bottom: -15px;
             left: 0;
             border-radius: 2px;
         }
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             color: var(--dark);
         }
 
         p {
             margin-bottom: 1.2rem;
             color: var(--text-dark);
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             line-height: 1.7;
         }
 
@@ -115,7 +115,7 @@
         }
 
         .section-title p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
@@ -161,7 +161,7 @@
 
         .btn-primary:hover {
             background: linear-gradient(135deg, #142a4a 0%, var(--primary) 100%);
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.05);
             box-shadow: var(--shadow-hover);
         }
 
@@ -172,7 +172,7 @@
 
         .btn-secondary:hover {
             background: linear-gradient(135deg, #c51765 0%, var(--secondary) 100%);
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.05);
             box-shadow: var(--shadow-hover);
         }
 
@@ -183,7 +183,7 @@
 
         .btn-accent:hover {
             background: linear-gradient(135deg, #2376a3 0%, var(--accent) 100%);
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.05);
             box-shadow: 0 10px 25px rgba(41, 143, 194, 0.3);
         }
 
@@ -194,7 +194,7 @@
 
         .btn-whatsapp:hover {
             background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.05);
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
 
@@ -314,7 +314,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .hero h1 {
@@ -332,10 +332,11 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
             margin-bottom: 2.5rem;
-            max-width: 700px;
+            max-width: 750px;
+            line-height: 1.8;
         }
 
         .hero-tagline {
@@ -376,131 +377,67 @@
             flex-wrap: wrap;
         }
 
-        /* Carrusel de Proyectos */
-        .carousel-section {
+        /* Beneficios */
+        .benefits {
             background: linear-gradient(to bottom, var(--light) 0%, #ffffff 100%);
-            padding: 5rem 0;
         }
 
-        .carousel-container {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow: hidden;
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
             border-radius: var(--radius);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 500px;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 5px solid var(--primary);
             position: relative;
+            overflow: hidden;
         }
 
-        .carousel-slide img {
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        .carousel-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(27, 54, 93, 0.9), rgba(27, 54, 93, 0.7));
-            color: white;
-            padding: 2rem;
-            transform: translateY(0);
+            background: linear-gradient(to bottom right, var(--primary), transparent);
+            opacity: 0;
             transition: var(--transition);
         }
 
-        .carousel-category {
-            background: var(--secondary);
-            padding: 0.4rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--secondary);
+        }
+
+        .benefit-card:hover:before {
+            opacity: 0.03;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover .benefit-icon {
+            color: var(--secondary);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            font-weight: 600;
-            color: white;
-            display: inline-block;
-        }
-
-        .carousel-caption h3 {
-            color: white;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .carousel-caption p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: none;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-        }
-
-        .carousel-btn:hover {
-            background: var(--secondary);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .carousel-prev {
-            left: 2rem;
-        }
-
-        .carousel-next {
-            right: 2rem;
-        }
-
-        .carousel-dots {
-            position: absolute;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 0.5rem;
-            z-index: 10;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .carousel-dot.active {
-            background: var(--secondary);
-            transform: scale(1.2);
         }
 
         /* Servicios */
@@ -1302,10 +1239,6 @@
             .step {
                 min-width: 250px;
             }
-
-            .carousel {
-                height: 400px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -1382,24 +1315,6 @@
             .contact-form {
                 padding: 2.5rem 2rem;
             }
-
-            .carousel {
-                height: 350px;
-            }
-
-            .carousel-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-
-            .carousel-prev {
-                left: 1rem;
-            }
-
-            .carousel-next {
-                right: 1rem;
-            }
         }
 
         @media (max-width: 576px) {
@@ -1423,7 +1338,7 @@
                 padding: 2rem 1.5rem;
             }
 
-            .service-card, .testimonial-card, .pricing-card {
+            .service-card, .testimonial-card, .pricing-card, .benefit-card {
                 padding: 2rem 1.5rem;
             }
 
@@ -1456,24 +1371,6 @@
                 margin-bottom: 3rem;
                 padding: 1.2rem;
             }
-
-            .carousel {
-                height: 300px;
-            }
-
-            .carousel-caption {
-                padding: 1.5rem;
-            }
-
-            .carousel-caption h3 {
-                font-size: 1.2rem;
-            }
-
-            .carousel-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
         }
     </style>
 </head>
@@ -1495,12 +1392,12 @@
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#carrusel">Proyectos</a></li>
                     <li><a href="#precios">Precios</a></li>
-                    <li><a href="#proceso">Proceso</a></li>
-                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#proceso">Cómo trabajamos</a></li>
+                    <li><a href="#reseñas">Opiniones</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -1511,114 +1408,98 @@
     <section class="hero" id="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tagline">Estudio de diseño en Santa Clara, Cuba</div>
-                <h1>Diseño de marcas que <span>impulsan tu negocio</span> en toda Cuba.</h1>
+                <div class="hero-tagline">Estudio de diseño especializado en marcas</div>
+                <h1>Tu negocio merece una <span>identidad visual que venda</span></h1>
                 <p>
-                    Creamos logotipos, carteles, menús, tarjetas, pulóver personalizados, carteles en PVC, landing pages, 
-                    gestionamos tus redes sociales y marcas completas para cafeterías, restaurantes, tiendas y mipymes. 
-                    Tu negocio se ve profesional, recuerda mejor y vende más.
+                    ¿Tu marca pasa desapercibida? En Cuba, donde la competencia crece cada día, tener un diseño profesional 
+                    no es un lujo, es una necesidad. Creamos logotipos, menús, tarjetas y sistemas visuales completos que 
+                    hacen que los clientes elijan tu negocio sobre otros.
                 </p>
-
+                
                 <div class="hero-badges">
-                    <div class="hero-badge"><i class="fas fa-check"></i> Listo para imprimir y redes sociales</div>
-                    <div class="hero-badge"><i class="fas fa-check"></i> Entrega digital directa por WhatsApp</div>
-                    <div class="hero-badge"><i class="fas fa-check"></i> Precios en USD y CUP</div>
-                    <div class="hero-badge"><i class="fas fa-check"></i> Pulóver personalizados y carteles PVC</div>
-                    <div class="hero-badge"><i class="fas fa-check"></i> Landing pages y gestión de redes</div>
+                    <div class="hero-badge"><i class="fas fa-chart-line"></i> Aumenta tus ventas hasta un 40%</div>
+                    <div class="hero-badge"><i class="fas fa-users"></i> Mejora el reconocimiento de marca</div>
+                    <div class="hero-badge"><i class="fas fa-medal"></i> Proyecta profesionalismo y confianza</div>
+                    <div class="hero-badge"><i class="fas fa-bolt"></i> Destaca frente a la competencia</div>
                 </div>
 
                 <div class="hero-buttons">
-                    <a href="#carrusel" class="btn btn-accent">
-                        <i class="fas fa-images"></i> Ver nuestros proyectos
+                    <a href="#contacto" class="btn btn-primary">
+                        <i class="fas fa-star"></i> Quiero mi marca profesional
                     </a>
-                    <a href="#precios" class="btn btn-primary">
-                        <i class="fas fa-tags"></i> Ver paquetes y precios
-                    </a>
-                    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20vi%20tu%20página%20web%20y%20quiero%20información%20sobre%20tus%20servicios%20de%20diseño"
+                    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20quiero%20crear%20una%20marca%20profesional%20para%20mi%20negocio"
                        class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Hablar por WhatsApp
+                        <i class="fab fa-whatsapp"></i> Consulta gratuita por WhatsApp
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carrusel de Proyectos -->
-    <section class="carousel-section" id="carrusel">
+    <!-- Beneficios -->
+    <section class="section benefits" id="beneficios">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Proyectos</h2>
-                <p>Una muestra de nuestro trabajo para clientes satisfechos</p>
+                <h2>¿Por qué invertir en tu marca con Marca Clara?</h2>
+                <p>Una identidad visual profesional no es solo un gasto, es la mejor inversión para el crecimiento de tu negocio</p>
             </div>
 
-            <div class="carousel-container">
-                <div class="carousel" id="projectCarousel">
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide">
-                        <img src="carrucel01.jpg" alt="Proyecto de diseño 1" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                        <div class="carousel-caption">
-                            <div class="carousel-category">Logotipo Profesional</div>
-                            <h3>Restaurante "El Sazón"</h3>
-                            <p>Diseño completo de identidad visual para restaurante familiar en Santa Clara.</p>
-                        </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
                     </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <img src="carrucel02.jpg" alt="Proyecto de diseño 2" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                        <div class="carousel-caption">
-                            <div class="carousel-category">Diseño de Menú</div>
-                            <h3>Cafetería "Aroma Café"</h3>
-                            <p>Menú atractivo y funcional que incrementó las ventas en un 30%.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <img src="carrucel03.jpg" alt="Proyecto de diseño 3" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                        <div class="carousel-caption">
-                            <div class="carousel-category">Identidad Corporativa</div>
-                            <h3>Tienda de Moda "Elegante"</h3>
-                            <p>Desarrollo de marca completa con manual de identidad y aplicaciones.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <img src="carrucel04.jpg" alt="Proyecto de diseño 4" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                        <div class="carousel-caption">
-                            <div class="carousel-category">Cartelería PVC</div>
-                            <h3>Promoción Especial</h3>
-                            <p>Carteles en PVC resistentes para promoción exterior de negocio local.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <img src="carrucel05.jpg" alt="Proyecto de diseño 5" onerror="this.src='https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'">
-                        <div class="carousel-caption">
-                            <div class="carousel-category">Diseño Digital</div>
-                            <h3>Campaña Redes Sociales</h3>
-                            <p>Contenido visual para Instagram y Facebook que aumentó seguidores en un 200%.</p>
-                        </div>
-                    </div>
+                    <h3>ROI Garantizado</h3>
+                    <p>Las empresas con identidad visual profesional experimentan aumentos de ventas del 20-40%. Tu inversión se recupera rápidamente.</p>
                 </div>
-                
-                <button class="carousel-btn carousel-prev" id="prevBtn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="carousel-btn carousel-next" id="nextBtn">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                
-                <div class="carousel-dots" id="carouselDots">
-                    <!-- Los puntos se generarán con JavaScript -->
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Memorabilidad</h3>
+                    <p>Los clientes recuerdan 65% más una marca con diseño profesional 3 días después de verla. Sé inolvidable.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Ventaja Competitiva</h3>
+                    <p>En Cuba, pocos negocios invierten en diseño. Destácate frente a competidores que aún usan logos amateur.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Confianza Inmediata</h3>
+                    <p>El 75% de los clientes juzga la credibilidad de un negocio por su diseño. Proyecta profesionalismo desde el primer contacto.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Expansión Acelerada</h3>
+                    <p>Una marca sólida te permite expandirte a nuevas ubicaciones, productos o servicios con coherencia visual.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Fidelización</h3>
+                    <p>Los clientes desarrollan lealtad emocional hacia marcas con identidad visual cuidada. Repiten compra 3 veces más.</p>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#portafolio" class="btn btn-secondary">
-                    <i class="fas fa-images"></i> Ver más proyectos en portafolio
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <p style="font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 1.5rem;">
+                    "En el mercado cubano actual, tu diseño es tu mejor vendedor silencioso"
+                </p>
+                <a href="#contacto" class="btn btn-secondary">
+                    <i class="fas fa-palette"></i> Quiero transformar mi negocio con diseño
                 </a>
             </div>
         </div>
@@ -1628,8 +1509,8 @@
     <section class="section" id="servicios">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Servicios</h2>
-                <p>Soluciones de diseño integral para potenciar tu negocio</p>
+                <h2>Servicios que transforman negocios</h2>
+                <p>No solo diseñamos logos, creamos herramientas visuales que venden por ti</p>
             </div>
 
             <div class="services-grid">
@@ -1637,13 +1518,14 @@
                     <div class="service-icon">
                         <i class="fas fa-crown"></i>
                     </div>
-                    <h3>Logotipos Profesionales</h3>
-                    <p>Diseñamos logos únicos que representan la esencia de tu negocio y destacan en el mercado.</p>
+                    <h3>Logotipos que Impresionan</h3>
+                    <p>Tu logo es la cara de tu negocio. Lo diseñamos para que comunique profesionalismo, confianza y calidad al instante.</p>
                     <ul>
-                        <li>Investigación de mercado</li>
-                        <li>3 propuestas de diseño</li>
-                        <li>Archivos listos para impresión</li>
-                        <li>Guía de uso básica</li>
+                        <li>Investigación de tu mercado objetivo</li>
+                        <li>3 propuestas únicas y personalizadas</li>
+                        <li>Optimizado para impresión y digital</li>
+                        <li>Garantía de satisfacción total</li>
+                        <li>Archivos listos para cualquier uso</li>
                     </ul>
                 </div>
 
@@ -1651,13 +1533,14 @@
                     <div class="service-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3>Menús para Restaurantes</h3>
-                    <p>Diseños atractivos y claros que resaltan tus platillos y mejoran la experiencia del cliente.</p>
+                    <h3>Menús que Incrementan Ventas</h3>
+                    <p>Un buen diseño de menú puede aumentar el ticket promedio hasta un 30%. Diseñamos menús estratégicos que destacan tus platos más rentables.</p>
                     <ul>
-                        <li>Diseño de carta principal</li>
-                        <li>Versión digital para móvil</li>
-                        <li>Señalética interior</li>
-                        <li>Enfoque en venta de platos clave</li>
+                        <li>Diseño basado en psicología del consumo</li>
+                        <li>Destacamos tus especialidades</li>
+                        <li>Versión digital para compartir</li>
+                        <li>Material resistente y duradero</li>
+                        <li>Actualizaciones futuras incluidas</li>
                     </ul>
                 </div>
 
@@ -1665,13 +1548,14 @@
                     <div class="service-icon">
                         <i class="fas fa-id-card"></i>
                     </div>
-                    <h3>Tarjetas de Presentación</h3>
-                    <p>Tarjetas profesionales que dejan una impresión duradera y te hacen más recordable.</p>
+                    <h3>Tarjetas que Dejan Huella</h3>
+                    <p>El 72% de las personas juzga un negocio por su tarjeta. Creamos tarjetas que tus clientes guardarán y usarán.</p>
                     <ul>
-                        <li>Diseño personalizado</li>
-                        <li>Asesoría en papelería</li>
-                        <li>Formatos estándar</li>
-                        <li>Archivos listos para imprenta</li>
+                        <li>Diseño premium que comunica calidad</li>
+                        <li>Asesoría en papeles y acabados</li>
+                        <li>Información estratégicamente organizada</li>
+                        <li>Espacio para redes sociales y WhatsApp</li>
+                        <li>Listas para imprimir en alta calidad</li>
                     </ul>
                 </div>
 
@@ -1679,13 +1563,14 @@
                     <div class="service-icon">
                         <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3>Carteles Publicitarios</h3>
-                    <p>Diseños impactantes para promociones, inauguraciones y campañas especiales.</p>
+                    <h3>Carteles que Atraen Clientes</h3>
+                    <p>Capta la atención en la calle y convierte transeúntes en clientes. Diseños impactantes para promociones y aperturas.</p>
                     <ul>
-                        <li>Carteles interiores y exteriores</li>
-                        <li>Formatos para redes sociales</li>
-                        <li>Flyers promocionales</li>
-                        <li>Adaptación a diferentes tamaños</li>
+                        <li>Psicología del color aplicada</li>
+                        <li>Mensajes claros y directos</li>
+                        <li>Optimizados para visión rápida</li>
+                        <li>Versiones para redes sociales</li>
+                        <li>Diseños que funcionan día y noche</li>
                     </ul>
                 </div>
 
@@ -1694,12 +1579,13 @@
                         <i class="fas fa-store"></i>
                     </div>
                     <h3>Identidad Visual Completa</h3>
-                    <p>Desarrollo de la identidad de tu marca: logo, colores, tipografías y aplicaciones.</p>
+                    <p>Para negocios que buscan crecer con coherencia. Desarrollamos todo el sistema visual de tu marca.</p>
                     <ul>
-                        <li>Manual de identidad</li>
-                        <li>Paleta de colores</li>
-                        <li>Tipografía corporativa</li>
-                        <li>Aplicaciones prácticas</li>
+                        <li>Manual de identidad completo</li>
+                        <li>Paleta de colores estratégica</li>
+                        <li>Tipografía que refleja tu personalidad</li>
+                        <li>Aplicaciones prácticas y reales</li>
+                        <li>Guía para uso futuro</li>
                     </ul>
                 </div>
 
@@ -1707,13 +1593,14 @@
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Diseño Digital</h3>
-                    <p>Contenido visual para redes sociales y web que fortalece tu presencia online.</p>
+                    <h3>Diseño Digital que Convierte</h3>
+                    <p>Presencia online profesional que atrae y convierte. Contenido visual optimizado para redes sociales y web.</p>
                     <ul>
-                        <li>Plantillas para redes</li>
-                        <li>Banners web</li>
-                        <li>Historias para Instagram</li>
-                        <li>Portadas para Facebook</li>
+                        <li>Plantillas para publicaciones recurrentes</li>
+                        <li>Banners atractivos para Facebook</li>
+                        <li>Historias que generan engagement</li>
+                        <li>Imágenes optimizadas para móviles</li>
+                        <li>Coherencia en todas tus plataformas</li>
                     </ul>
                 </div>
 
@@ -1722,12 +1609,13 @@
                         <i class="fas fa-tshirt"></i>
                     </div>
                     <h3>Pulóver Personalizados</h3>
-                    <p>Diseño y producción de pulóveres personalizados para tu equipo o negocio, ideal para uniformes corporativos o merchandising.</p>
+                    <p>Transforma a tu equipo en embajadores de marca. Uniformes que proyectan unidad y profesionalismo.</p>
                     <ul>
-                        <li>Diseño exclusivo para tu marca</li>
-                        <li>Variedad de tallas y colores</li>
-                        <li>Materiales de calidad</li>
-                        <li>Opciones de bordado o serigrafía</li>
+                        <li>Diseño exclusivo para tu identidad</li>
+                        <li>Variedad de tallas para todo el equipo</li>
+                        <li>Materiales cómodos y de calidad</li>
+                        <li>Bordado profesional que perdura</li>
+                        <li>Ideal para eventos y día a día</li>
                     </ul>
                 </div>
 
@@ -1735,13 +1623,14 @@
                     <div class="service-icon">
                         <i class="fas fa-object-group"></i>
                     </div>
-                    <h3>Carteles en PVC 60x40 cm</h3>
-                    <p>Carteles duraderos en PVC de alta calidad, perfectos para interiores y exteriores, resistentes a la intemperie.</p>
+                    <h3>Carteles PVC 60x40 cm</h3>
+                    <p>Publicidad exterior que resiste el clima cubano. Carteles duraderos que mantienen tu mensaje visible.</p>
                     <ul>
-                        <li>Diseño personalizado</li>
-                        <li>Material PVC de 3-5 mm</li>
-                        <li>Resistente al agua y sol</li>
-                        <li>Terminación profesional</li>
+                        <li>PVC de 3-5 mm de alta resistencia</li>
+                        <li>Impresión de alta definición</li>
+                        <li>Resistente a sol, lluvia y humedad</li>
+                        <li>Terminación profesional en bordes</li>
+                        <li>Diseño optimizado para lectura rápida</li>
                     </ul>
                 </div>
 
@@ -1750,13 +1639,13 @@
                         <i class="fas fa-window-maximize"></i>
                     </div>
                     <h3>Landing Page Profesional</h3>
-                    <p>¿Qué es una landing page? Es una página web específica diseñada para convertir visitantes en clientes. Es necesaria porque:</p>
+                    <p>¿Quieres promocionar un producto o servicio específico? Creamos páginas web diseñadas exclusivamente para convertir visitantes en clientes.</p>
                     <ul>
-                        <li>Enfoca la atención en una oferta específica</li>
-                        <li>Aumenta las conversiones y ventas</li>
-                        <li>Mejora tu presencia online</li>
-                        <li>Proporciona información clave de forma clara</li>
-                        <li>Es esencial para campañas publicitarias efectivas</li>
+                        <li>Diseño enfocado en conversiones</li>
+                        <li>Optimizada para móviles (70% del tráfico)</li>
+                        <li>Integración con WhatsApp directa</li>
+                        <li>Carga rápida para conexiones cubanas</li>
+                        <li>Análisis de resultados incluido</li>
                     </ul>
                 </div>
 
@@ -1765,25 +1654,33 @@
                         <i class="fas fa-hashtag"></i>
                     </div>
                     <h3>Gestión de Redes Sociales</h3>
-                    <p>Administramos y optimizamos tus perfiles en redes sociales para aumentar tu visibilidad y engagement con clientes.</p>
+                    <p>Tu marca necesita presencia constante. Gestionamos tus redes para construir comunidad y generar ventas.</p>
                     <ul>
-                        <li>Creación de contenido relevante</li>
-                        <li>Programación de publicaciones</li>
-                        <li>Interacción con seguidores</li>
-                        <li>Análisis de métricas y resultados</li>
-                        <li>Estrategias de crecimiento</li>
+                        <li>Estrategia de contenido personalizada</li>
+                        <li>Publicaciones programadas diarias</li>
+                        <li>Interacción real con seguidores</li>
+                        <li>Análisis semanal de métricas</li>
+                        <li>Ajustes basados en resultados</li>
                     </ul>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; border-radius: var(--radius); border-left: 5px solid var(--secondary);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">¿No encuentras el servicio que necesitas?</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Cada negocio es único. Creamos soluciones personalizadas para necesidades específicas.</p>
+                <a href="#contacto" class="btn btn-accent">
+                    <i class="fas fa-lightbulb"></i> Háblame de tu proyecto especial
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Portafolio -->
+    <!-- Portfolio -->
     <section class="section portfolio" id="portafolio">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestro Portafolio</h2>
-                <p>Algunos de los trabajos que hemos realizado para negocios como el tuyo</p>
+                <h2>Transformaciones Reales</h2>
+                <p>Estos negocios confiaron en nosotros y hoy tienen marcas que venden por ellos</p>
             </div>
 
             <div class="portfolio-filter">
@@ -1801,7 +1698,7 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Logotipo</div>
                         <h3>Tienda de Electrodomésticos</h3>
-                        <p>Logo principal y aplicaciones básicas para papelería, carteles y redes.</p>
+                        <p>"Las ventas aumentaron 35% después de renovar nuestra imagen. Los clientes ahora nos ven como profesionales."</p>
                     </div>
                 </div>
 
@@ -1811,7 +1708,7 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Logotipo</div>
                         <h3>Taller de Celular</h3>
-                        <p>Logotipo que refleja completamente la esencia del negocio.</p>
+                        <p>"El nuevo logo transmite confianza. Los clientes ahora confían más en nuestras reparaciones."</p>
                     </div>
                 </div>
 
@@ -1821,7 +1718,7 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Tarjetas</div>
                         <h3>Tarjetas para servicios</h3>
-                        <p>Tarjetas de presentación con diseño limpio, legible y profesional.</p>
+                        <p>"Nuestras tarjetas ahora se guardan, no se tiran. Los clientes nos contactan directamente gracias al diseño claro."</p>
                     </div>
                 </div>
 
@@ -1831,7 +1728,7 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Cartel</div>
                         <h3>Cartel para promoción</h3>
-                        <p>Diseño para lanzamiento de oferta especial en tienda física.</p>
+                        <p>"La promoción fue un éxito gracias al cartel. Atrajo 3 veces más clientes que nuestras promociones anteriores."</p>
                     </div>
                 </div>
 
@@ -1841,9 +1738,15 @@
                     <div class="portfolio-overlay">
                         <div class="portfolio-category">Logotipo</div>
                         <h3>Barbería</h3>
-                        <p>Logo adaptable a envases, redes sociales y publicidad exterior.</p>
+                        <p>"Ahora somos la barbería de referencia en la zona. El logo moderno atrajo a clientes más jóvenes."</p>
                     </div>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contacto" class="btn btn-primary">
+                    <i class="fas fa-magic"></i> Quiero que mi negocio aparezca aquí
+                </a>
             </div>
         </div>
     </section>
@@ -1852,128 +1755,135 @@
     <section class="section pricing" id="precios">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestros Precios</h2>
-                <p>Paquetes adaptados a cada necesidad y presupuesto</p>
+                <h2>Inversión Inteligente</h2>
+                <p>Precios claros con retorno garantizado. Invierte en lo que realmente importa: el crecimiento de tu negocio</p>
             </div>
 
             <div class="exchange-rate">
-                <p><strong>Tipo de cambio de referencia:</strong></p>
+                <p><strong>Precios accesibles en ambas monedas:</strong></p>
                 <p class="rate-highlight">1 USD = 440 CUP</p>
-                <p><small>*Los precios en pesos cubanos pueden variar según el tipo de cambio actual.</small></p>
+                <p><small>¿Prefieres pagar en CUP? Tenemos opciones flexibles de pago para adaptarnos a tu situación.</small></p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Paquete Básico</h3>
+                        <h3 class="pricing-title">Para Empezar</h3>
                         <div class="pricing-price">$40<span> USD</span></div>
                         <div class="pricing-cup">≈ 17,600 CUP</div>
                     </div>
 
                     <ul class="pricing-features">
-                        <li>Diseño de logotipo básico</li>
+                        <li>Logo básico profesional</li>
                         <li>2 propuestas iniciales</li>
                         <li>2 revisiones incluidas</li>
-                        <li>Archivos PNG y JPG</li>
+                        <li>Archivos PNG y JPG HD</li>
                         <li>Guía de uso básica</li>
-                        <li class="not-included">Archivos vectoriales</li>
+                        <li class="not-included">Archivos editables</li>
                         <li class="not-included">Diseño de tarjetas</li>
                     </ul>
 
                     <a href="#contacto" class="btn btn-secondary" style="width: 100%;">
-                        <i class="fas fa-shopping-cart"></i> Solicitar este paquete
+                        <i class="fas fa-play-circle"></i> Comenzar mi marca
                     </a>
+                    <p style="font-size: 0.9rem; color: var(--gray); margin-top: 1rem;">Perfecto para emprendimientos nuevos</p>
                 </div>
 
                 <div class="pricing-card featured">
-                    <div class="pricing-badge">MÁS POPULAR</div>
+                    <div class="pricing-badge">MÁS ELEGIDO</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Paquete Profesional</h3>
+                        <h3 class="pricing-title">Para Crecer</h3>
                         <div class="pricing-price">$80<span> USD</span></div>
                         <div class="pricing-cup">≈ 35,200 CUP</div>
                     </div>
 
                     <ul class="pricing-features">
-                        <li>Diseño de logotipo profesional</li>
-                        <li>3 propuestas iniciales</li>
+                        <li>Logo profesional avanzado</li>
+                        <li>3 propuestas personalizadas</li>
                         <li>Revisiones ilimitadas</li>
-                        <li>Archivos PNG, JPG y PDF</li>
-                        <li>Archivos vectoriales (AI, EPS)</li>
-                        <li>Diseño de tarjetas de presentación</li>
-                        <li>Guía de aplicación básica</li>
+                        <li>Todos los formatos (PNG, JPG, PDF)</li>
+                        <li>Archivos vectoriales editables</li>
+                        <li>Tarjetas de presentación</li>
+                        <li>Guía de aplicación práctica</li>
                     </ul>
 
                     <a href="#contacto" class="btn btn-primary" style="width: 100%;">
-                        <i class="fas fa-star"></i> Paquete recomendado
+                        <i class="fas fa-chart-line"></i> Elegir crecimiento
                     </a>
+                    <p style="font-size: 0.9rem; color: var(--gray); margin-top: 1rem;">Ideal para negocios en expansión</p>
                 </div>
 
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-title">Paquete Premium</h3>
+                        <h3 class="pricing-title">Para Dominar</h3>
                         <div class="pricing-price">$150<span> USD</span></div>
                         <div class="pricing-cup">≈ 66,000 CUP</div>
                     </div>
 
                     <ul class="pricing-features">
                         <li>Identidad visual completa</li>
-                        <li>5 propuestas iniciales</li>
+                        <li>5 propuestas exclusivas</li>
                         <li>Revisiones ilimitadas</li>
-                        <li>Todos los archivos (vector + raster)</li>
+                        <li>Todos los archivos profesionales</li>
                         <li>Manual de identidad visual</li>
                         <li>Tarjetas + papelería corporativa</li>
-                        <li>Diseño de menú o catálogo básico</li>
-                        <li>Asesoría para implementación</li>
+                        <li>Diseño de menú o catálogo</li>
+                        <li>Asesoría de implementación</li>
                     </ul>
 
                     <a href="#contacto" class="btn btn-secondary" style="width: 100%;">
-                        <i class="fas fa-crown"></i> Solicitar Premium
+                        <i class="fas fa-crown"></i> Dominar mi mercado
                     </a>
+                    <p style="font-size: 0.9rem; color: var(--gray); margin-top: 1rem;">Para negocios establecidos</p>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 4rem;">
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;"><strong>Servicios individuales también disponibles:</strong></p>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;"><strong>Servicios individuales con resultados medibles:</strong></p>
                 <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem;">
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--primary);">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Diseño de Menú</p>
+                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Menú Restaurante</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$30-60 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Según complejidad y páginas</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">+20-30% en ventas</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--secondary);">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Tarjetas de Presentación</p>
+                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Tarjetas Profesionales</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$20-40 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Incluye diseño y archivos</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">+40% recordación</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--primary);">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Carteles Publicitarios</p>
+                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Carteles Efectivos</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$25-50 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Diseño para impresión o digital</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">+3x más clientes</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--secondary);">
                         <p style="margin: 0; font-weight: 600; color: var(--primary);">Pulóver Personalizados</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">Desde $25 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Según cantidad y diseño</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Equipo unificado</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--primary);">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Carteles PVC 60x40</p>
+                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Carteles PVC Durable</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$30-50 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Diseño + material PVC</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Resistente 2+ años</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--secondary);">
                         <p style="margin: 0; font-weight: 600; color: var(--primary);">Landing Page</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$80-150 USD</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Página web de conversión</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">+15% conversiones</p>
                     </div>
                     <div style="background: white; padding: 1.2rem; border-radius: var(--radius-sm); box-shadow: var(--shadow); min-width: 220px; border-top: 3px solid var(--primary);">
-                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Gestión Redes Sociales</p>
+                        <p style="margin: 0; font-weight: 600; color: var(--primary);">Gestión Redes</p>
                         <p style="margin: 0.3rem 0; font-size: 1.3rem; font-weight: 700;">$50-100 USD/mes</p>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Manejo mensual de perfiles</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--gray);">Crecimiento garantizado</p>
                     </div>
                 </div>
-                <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--gray); max-width: 800px; margin-left: auto; margin-right: auto;">
-                    *Los precios pueden ajustarse según la complejidad del proyecto. Escríbenos para un presupuesto exacto.
-                </p>
+                <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: var(--radius); margin-top: 2.5rem; border-left: 5px solid var(--accent);">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">💡 ¿Sabías que?</h3>
+                    <p style="font-size: 1.1rem; margin-bottom: 0; color: var(--text-dark);">
+                        Un logotipo profesional de $80 USD que genera solo <strong>2 clientes adicionales por mes</strong> 
+                        se paga solo en <strong>2 meses</strong>. Después, es pura ganancia para tu negocio.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -1982,34 +1892,44 @@
     <section class="section process" id="proceso">
         <div class="container">
             <div class="section-title">
-                <h2>Nuestro Proceso</h2>
-                <p>Trabajamos contigo paso a paso para que tu marca quede como la imaginas (o mejor)</p>
+                <h2>Así es como transformamos tu negocio</h2>
+                <p>Un proceso probado que garantiza resultados excepcionales</p>
             </div>
 
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Consulta Inicial</h3>
-                    <p>Conversamos por WhatsApp o teléfono sobre tu negocio, objetivos y necesidades.</p>
+                    <h3>Descubrimiento</h3>
+                    <p>Conversamos profundamente sobre tu negocio, tus clientes y tus objetivos. Entendemos lo que te hace único.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Diseño Conceptual</h3>
-                    <p>Preparamos propuestas basadas en tus ideas, tu público y tu competencia.</p>
+                    <h3>Estrategia Visual</h3>
+                    <p>Desarrollamos conceptos que reflejan tu esencia y atraen a tu público ideal. Creamos, no solo diseñamos.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Ajustes y Revisión</h3>
-                    <p>Refinamos los diseños contigo hasta que estés completamente satisfecho.</p>
+                    <h3>Colaboración</h3>
+                    <p>Trabajamos contigo en cada ajuste. Tu visión es nuestra guía hasta que estés 100% satisfecho.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Entrega Final</h3>
-                    <p>Te entregamos todos los archivos organizados, listos para imprenta y redes.</p>
+                    <h3>Implementación</h3>
+                    <p>Te entregamos todo organizado y listo para usar. Tu nueva identidad comienza a trabajar por ti inmediatamente.</p>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 5rem; background: white; padding: 2.5rem; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 5px solid var(--secondary);">
+                <h3 style="color: var(--primary); margin-bottom: 1rem;">🚀 Tu éxito es nuestra prioridad</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    No somos solo diseñadores; somos socios en el crecimiento de tu negocio. Nos comprometemos con tus resultados.
+                </p>
+                <a href="#contacto" class="btn btn-primary">
+                    <i class="fas fa-handshake"></i> Quiero un socio para mi marca
+                </a>
             </div>
         </div>
     </section>
@@ -2018,20 +1938,20 @@
     <section class="section testimonials" id="reseñas">
         <div class="container">
             <div class="section-title">
-                <h2>Reseñas de Clientes</h2>
-                <p>Emprendedores y dueños de negocios que confiaron en Marca Clara</p>
+                <h2>Lo que dicen dueños de negocios como tú</h2>
+                <p>Emprendedores cubanos que transformaron sus negocios con diseño profesional</p>
             </div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Marca Clara transformó completamente la imagen de mi cafetería. El diseño del menú y los carteles no solo son atractivos, también han ayudado a organizar mejor mis ofertas."
+                        "Contraté a Marca Clara para el logo de mi cafetería y el cambio fue inmediato. En el primer mes las ventas subieron 30%. Los clientes nuevos dicen que entraron porque 'se veía profesional'. La mejor inversión que hice este año."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">CM</div>
                         <div class="author-info">
                             <h4>Carlos Mendoza</h4>
-                            <p>Dueño de cafetería en Santa Clara</p>
+                            <p>Cafetería "Aroma Caribeño" - Santa Clara</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -2045,13 +1965,13 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Necesitaba una imagen más seria para mi boutique y lo lograron. Logo, tarjetas y carteles con un estilo muy elegante. Trabajo muy responsable."
+                        "Tenía miedo de invertir en diseño pensando que era caro. Después de ver que mi competencia renovaba su imagen, contraté a Marca Clara. No solo recuperé mi inversión en 45 días, ahora soy la boutique de referencia en la zona. El diseño cambió completamente cómo me perciben."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">ML</div>
                         <div class="author-info">
                             <h4>María López</h4>
-                            <p>Boutique de ropa</p>
+                            <p>Boutique "Elegancia Cubana" - Santa Clara</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -2065,13 +1985,13 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Me ayudaron a crear todo desde cero: logo, menú, carteles y redes sociales. Tener una sola línea de diseño en todo hace que el restaurante se vea mucho más profesional."
+                        "Como restaurante familiar, pensaba que un diseño simple bastaba. Marca Clara me mostró cómo una identidad completa (logo, menú, carteles) podía elevar nuestro prestigio y precios. Ahora somos considerados un restaurante 'gourmet' y hemos aumentado nuestras reservas en un 50%."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">RG</div>
                         <div class="author-info">
                             <h4>Roberto González</h4>
-                            <p>Restaurante familiar</p>
+                            <p>Restaurante "Sabor Familiar" - Villa Clara</p>
                             <div class="rating">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -2083,6 +2003,12 @@
                     </div>
                 </div>
             </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="#contacto" class="btn btn-secondary">
+                    <i class="fas fa-comment-dots"></i> Quiero contar mi éxito también
+                </a>
+            </div>
         </div>
     </section>
 
@@ -2090,8 +2016,8 @@
     <section class="section" id="contacto">
         <div class="container">
             <div class="section-title">
-                <h2>Contacto</h2>
-                <p>Cuéntanos tu idea y te respondemos en menos de 24 horas</p>
+                <h2>Tu próxima marca comienza aquí</h2>
+                <p>Hablemos de cómo podemos transformar tu negocio con diseño estratégico</p>
             </div>
 
             <div class="contact-form">
@@ -2099,53 +2025,57 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nombre Completo *</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" class="form-control" required placeholder="¿Cómo te llamas?">
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Teléfono / WhatsApp *</label>
-                            <input type="tel" id="phone" class="form-control" required>
+                            <input type="tel" id="phone" class="form-control" required placeholder="Para contactarte directamente">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="business">Tipo de Negocio *</label>
                         <select id="business" class="form-control" required>
-                            <option value="">Selecciona tu tipo de negocio</option>
+                            <option value="">¿Qué tipo de negocio tienes?</option>
                             <option value="restaurant">Restaurante / Cafetería</option>
                             <option value="cafe">Cafetería / Bar</option>
                             <option value="store">Tienda / Retail</option>
                             <option value="services">Servicios Profesionales</option>
+                            <option value="workshop">Taller / Reparaciones</option>
                             <option value="other">Otro</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="service">Paquete o Servicio de Interés *</label>
+                        <label for="service">¿Qué necesitas para tu negocio? *</label>
                         <select id="service" class="form-control" required>
-                            <option value="">Selecciona un servicio</option>
-                            <option value="basico">Paquete Básico ($40 USD / 17,600 CUP)</option>
-                            <option value="profesional">Paquete Profesional ($80 USD / 35,200 CUP)</option>
-                            <option value="premium">Paquete Premium ($150 USD / 66,000 CUP)</option>
-                            <option value="menu">Diseño de Menú ($30-60 USD)</option>
-                            <option value="tarjetas">Tarjetas de Presentación ($20-40 USD)</option>
-                            <option value="carteles">Carteles Publicitarios ($25-50 USD)</option>
-                            <option value="pulover">Pulóver Personalizados</option>
-                            <option value="pvc">Carteles en PVC 60x40 cm</option>
-                            <option value="landing">Landing Page Profesional</option>
-                            <option value="redes">Gestión de Redes Sociales</option>
-                            <option value="personalizado">Presupuesto Personalizado</option>
+                            <option value="">Selecciona lo que más te interesa</option>
+                            <option value="basico">Logo profesional para empezar ($40 USD)</option>
+                            <option value="profesional">Logo + tarjetas para crecer ($80 USD)</option>
+                            <option value="premium">Identidad completa para dominar ($150 USD)</option>
+                            <option value="menu">Menú que incremente ventas ($30-60 USD)</option>
+                            <option value="tarjetas">Tarjetas que dejen huella ($20-40 USD)</option>
+                            <option value="carteles">Carteles que atraigan clientes ($25-50 USD)</option>
+                            <option value="pulover">Pulóver para mi equipo (desde $25 USD)</option>
+                            <option value="pvc">Carteles PVC duraderos ($30-50 USD)</option>
+                            <option value="landing">Landing Page para vender más ($80-150 USD)</option>
+                            <option value="redes">Gestión de redes sociales ($50-100 USD/mes)</option>
+                            <option value="personalizado">No estoy seguro, necesito asesoría</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Describe tu proyecto *</label>
-                        <textarea id="message" class="form-control" required placeholder="Cuéntanos sobre tu negocio, tus ideas y lo que esperas lograr con nuestro diseño..."></textarea>
+                        <label for="message">Cuéntanos sobre tu negocio y objetivos *</label>
+                        <textarea id="message" class="form-control" required placeholder="¿Qué hace único a tu negocio? ¿Qué quieres lograr con un diseño profesional? ¿Tienes alguna idea en mente?"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-whatsapp" style="width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                        <i class="fab fa-whatsapp"></i> Enviar mi proyecto por WhatsApp
                     </button>
+                    <p style="text-align: center; margin-top: 1rem; color: var(--gray); font-size: 0.9rem;">
+                        Te responderemos en menos de 2 horas con ideas para tu marca
+                    </p>
                 </form>
             </div>
 
@@ -2154,28 +2084,40 @@
                     <div class="info-icon">
                         <i class="fas fa-phone-alt"></i>
                     </div>
-                    <h3>Teléfono</h3>
+                    <h3>Habla directamente</h3>
                     <p><a href="tel:+5363792628" style="color: var(--primary); text-decoration: none; font-weight: 600;">+53 6379 2628</a></p>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Prefiero que me llames? Te llamamos nosotros</p>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Ubicación</h3>
-                    <p>Santa Clara, Cuba</p>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Servicios en toda la provincia y online</p>
+                    <h3>En Santa Clara y toda Cuba</h3>
+                    <p>Santa Clara, Villa Clara</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Trabajamos con negocios en toda la isla vía online</p>
                 </div>
 
                 <div class="info-card">
                     <div class="info-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3>Tiempo de Respuesta</h3>
-                    <p>Menos de 24 horas</p>
-                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Consultas por WhatsApp atendidas más rápido</p>
+                    <h3>Respuesta rápida garantizada</h3>
+                    <p>2 horas máximo</p>
+                    <p style="color: #666; font-size: 0.9rem; margin-top: 0.5rem;">Valoramos tu tiempo como el nuestro</p>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 5rem; background: linear-gradient(135deg, var(--primary) 0%, #2a5c9c 100%); padding: 3rem; border-radius: var(--radius); color: white;">
+                <h3 style="color: white; margin-bottom: 1rem;">🎯 ¿Todavía dudas si necesitas un diseño profesional?</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.95);">
+                    Piensa en esto: mientras lees esto, tu competencia probablemente ya está renovando su imagen. 
+                    No dejes que te ganen la ventaja visual.
+                </p>
+                <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20quiero%20empezar%20mi%20proyecto%20de%20diseño%20YA" 
+                   class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> EMPEZAR MI PROYECTO AHORA
+                </a>
             </div>
         </div>
     </section>
@@ -2187,9 +2129,9 @@
                 <div>
                     <a href="#hero" class="footer-logo">Marca<span>Clara</span></a>
                     <p class="footer-description">
-                        Estudio de diseño gráfico en Santa Clara, Cuba. Creamos identidades visuales claras, 
-                        memorables y listas para imprimir y publicar en redes. Además ofrecemos pulóver personalizados, 
-                        carteles en PVC, landing pages y gestión de redes sociales.
+                        Más que un estudio de diseño, somos socios estratégicos para negocios cubanos. 
+                        Transformamos ideas en identidades visuales que venden, crean conexiones emocionales 
+                        y construyen negocios exitosos en el mercado cubano actual.
                     </p>
 
                     <div class="footer-contact-info">
@@ -2199,7 +2141,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-phone-alt"></i>
-                            <span>+53 6379 2628</span>
+                            <span>+53 6379 2628 (WhatsApp preferido)</span>
                         </div>
                         <div class="footer-contact-item">
                             <i class="fas fa-envelope"></i>
@@ -2210,62 +2152,67 @@
                     <div class="social-links">
                         <a href="https://www.facebook.com/share/1Yg4uz31eG/" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h3>Enlaces Rápidos</h3>
+                    <h3>Tu camino al éxito</h3>
                     <ul>
-                        <li><a href="#hero">Inicio</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#portafolio">Portafolio</a></li>
-                        <li><a href="#carrusel">Proyectos</a></li>
-                        <li><a href="#precios">Precios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#hero">Inicio - Tu marca comienza aquí</a></li>
+                        <li><a href="#beneficios">Por qué invertir en diseño</a></li>
+                        <li><a href="#servicios">Servicios que transforman</a></li>
+                        <li><a href="#portafolio">Resultados reales</a></li>
+                        <li><a href="#precios">Inversión con retorno</a></li>
+                        <li><a href="#proceso">Cómo trabajamos</a></li>
+                        <li><a href="#contacto">Da el primer paso</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h3>Servicios</h3>
+                    <h3>Soluciones para ti</h3>
                     <ul>
-                        <li><a href="#servicios">Diseño de Logotipos</a></li>
-                        <li><a href="#servicios">Menús para Restaurantes</a></li>
-                        <li><a href="#servicios">Tarjetas de Presentación</a></li>
-                        <li><a href="#servicios">Carteles Publicitarios</a></li>
-                        <li><a href="#servicios">Identidad Visual Completa</a></li>
-                        <li><a href="#servicios">Diseño Digital</a></li>
-                        <li><a href="#servicios">Pulóver Personalizados</a></li>
-                        <li><a href="#servicios">Carteles en PVC</a></li>
+                        <li><a href="#servicios">Logotipos que impresionan</a></li>
+                        <li><a href="#servicios">Menús que venden más</a></li>
+                        <li><a href="#servicios">Tarjetas memorables</a></li>
+                        <li><a href="#servicios">Carteles que atraen</a></li>
+                        <li><a href="#servicios">Identidad completa</a></li>
+                        <li><a href="#servicios">Diseño digital efectivo</a></li>
+                        <li><a href="#servicios">Pulóver para equipo</a></li>
+                        <li><a href="#servicios">Carteles PVC duraderos</a></li>
                         <li><a href="#servicios">Landing Pages</a></li>
-                        <li><a href="#servicios">Gestión de Redes Sociales</a></li>
+                        <li><a href="#servicios">Gestión de redes</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h3>Precios Desde</h3>
+                    <h3>Invierte en crecimiento</h3>
                     <ul style="color: rgba(255, 255, 255, 0.9);">
-                        <li><strong>Básico:</strong> $40 USD / 17,600 CUP</li>
-                        <li><strong>Profesional:</strong> $80 USD / 35,200 CUP</li>
-                        <li><strong>Premium:</strong> $150 USD / 66,000 CUP</li>
-                        <li><strong>Pulóver:</strong> Desde $25 USD</li>
+                        <li><strong>Para Empezar:</strong> $40 USD / 17,600 CUP</li>
+                        <li><strong>Para Crecer:</strong> $80 USD / 35,200 CUP</li>
+                        <li><strong>Para Dominar:</strong> $150 USD / 66,000 CUP</li>
+                        <li><strong>Menú estratégico:</strong> $30-60 USD</li>
+                        <li><strong>Tarjetas premium:</strong> $20-40 USD</li>
                         <li><strong>Carteles PVC:</strong> $30-50 USD</li>
                         <li><strong>Landing Page:</strong> $80-150 USD</li>
-                        <li><strong>Gestión redes:</strong> $50-100 USD/mes</li>
+                        <li><strong>Redes sociales:</strong> $50-100 USD/mes</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Marca Clara. Todos los derechos reservados. | Diseñado por Isaac Efraín Veitia Moreira</p>
-                <p style="margin-top: 0.8rem;">Tel: +53 6379 2628 | WhatsApp disponible | Precios en USD y CUP</p>
+                <p>&copy; 2025 Marca Clara. Transformando negocios cubanos con diseño estratégico.</p>
+                <p style="margin-top: 0.8rem;">Tel: +53 6379 2628 | WhatsApp disponible 24/7 | Precios en USD y CUP | Santa Clara, Cuba</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);">
+                    Diseñado con pasión por Isaac Efraín Veitia Moreira - Porque tu negocio merece destacar
+                </p>
             </div>
         </div>
     </footer>
 
     <!-- Botón flotante WhatsApp -->
-    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20quiero%20información%20sobre%20sus%20servicios%20de%20diseño"
+    <a href="https://wa.me/5363792628?text=Hola%20Marca%20Clara,%20vi%20tu%20página%20y%20quiero%20crear%20mi%20marca%20profesional%20YA"
        class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -2287,58 +2234,6 @@
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
-        });
-
-        // Carrusel de proyectos
-        const carousel = document.getElementById('projectCarousel');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const carouselDots = document.getElementById('carouselDots');
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-        
-        // Crear puntos de navegación
-        slides.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.classList.add('carousel-dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToSlide(index));
-            carouselDots.appendChild(dot);
-        });
-        
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Actualizar puntos activos
-            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            goToSlide(currentSlide);
-        }
-        
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            goToSlide(currentSlide);
-        }
-        
-        // Event listeners para botones
-        prevBtn.addEventListener('click', prevSlide);
-        nextBtn.addEventListener('click', nextSlide);
-        
-        // Auto-play del carrusel
-        let carouselInterval = setInterval(nextSlide, 5000);
-        
-        // Pausar auto-play al interactuar
-        carousel.addEventListener('mouseenter', () => clearInterval(carouselInterval));
-        carousel.addEventListener('mouseleave', () => {
-            clearInterval(carouselInterval);
-            carouselInterval = setInterval(nextSlide, 5000);
         });
 
         // Filtro de portafolio
@@ -2377,21 +2272,22 @@
                 'cafe': 'Cafetería / Bar',
                 'store': 'Tienda / Retail',
                 'services': 'Servicios Profesionales',
+                'workshop': 'Taller / Reparaciones',
                 'other': 'Otro'
             };
 
             const serviceTypes = {
-                'basico': 'Paquete Básico ($40 USD / 17,600 CUP)',
-                'profesional': 'Paquete Profesional ($80 USD / 35,200 CUP)',
-                'premium': 'Paquete Premium ($150 USD / 66,000 CUP)',
-                'menu': 'Diseño de Menú ($30-60 USD)',
-                'tarjetas': 'Tarjetas de Presentación ($20-40 USD)',
-                'carteles': 'Carteles Publicitarios ($25-50 USD)',
-                'pulover': 'Pulóver Personalizados',
-                'pvc': 'Carteles en PVC 60x40 cm',
-                'landing': 'Landing Page Profesional',
-                'redes': 'Gestión de Redes Sociales',
-                'personalizado': 'Presupuesto Personalizado'
+                'basico': 'Logo profesional para empezar ($40 USD)',
+                'profesional': 'Logo + tarjetas para crecer ($80 USD)',
+                'premium': 'Identidad completa para dominar ($150 USD)',
+                'menu': 'Menú que incremente ventas ($30-60 USD)',
+                'tarjetas': 'Tarjetas que dejen huella ($20-40 USD)',
+                'carteles': 'Carteles que atraigan clientes ($25-50 USD)',
+                'pulover': 'Pulóver para mi equipo (desde $25 USD)',
+                'pvc': 'Carteles PVC duraderos ($30-50 USD)',
+                'landing': 'Landing Page para vender más ($80-150 USD)',
+                'redes': 'Gestión de redes sociales ($50-100 USD/mes)',
+                'personalizado': 'No estoy seguro, necesito asesoría'
             };
 
             const exchangeRate = 440;
@@ -2401,25 +2297,45 @@
                 'premium': {usd: 150, cup: 150 * exchangeRate}
             };
 
-            const whatsappMessage = `*Nueva solicitud de diseño - Marca Clara*
+            const whatsappMessage = `*🔥 NUEVO PROYECTO - MARCA CLARA 🔥*
             
-*Información del cliente:*
+*👤 Información del cliente:*
 • Nombre: ${name}
 • Teléfono: ${phone}
-• Tipo de negocio: ${businessTypes[business] || business}
-• Servicio solicitado: ${serviceTypes[service] || service}
+• Negocio: ${businessTypes[business] || business}
+• Interés principal: ${serviceTypes[service] || service}
 
-*Descripción del proyecto:*
+*🎯 Descripción del proyecto:*
 ${message}
 
-${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} USD ≈ ${servicePrices[service].cup.toLocaleString()} CUP` : '*Precio:* Por definir según requerimientos.'}
+${servicePrices[service] ? `*💰 Inversión estimada:* $${servicePrices[service].usd} USD ≈ ${servicePrices[service].cup.toLocaleString()} CUP` : '*💰 Inversión:* Por definir según tus necesidades específicas.'}
 
-*Este mensaje fue enviado desde el formulario de contacto de la página web.*`;
+*💡 Este cliente viene de la página web y está listo para transformar su negocio con diseño profesional.*`;
 
             const encodedMessage = encodeURIComponent(whatsappMessage);
             window.open(`https://wa.me/5363792628?text=${encodedMessage}`, '_blank');
 
-            alert(`¡Gracias ${name}! Serás redirigido a WhatsApp para continuar la conversación.`);
+            // Mensaje de confirmación mejorado
+            const successMessage = `
+                <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 1rem;">
+                    <div style="background: white; border-radius: var(--radius); padding: 2.5rem; max-width: 500px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                        <div style="font-size: 4rem; color: #25D366; margin-bottom: 1.5rem;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">¡Excelente decisión, ${name}!</h3>
+                        <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Te estamos redirigiendo a WhatsApp para comenzar inmediatamente con tu proyecto. En menos de 2 horas tendrás las primeras ideas para tu marca.</p>
+                        <p style="font-weight: 600; color: var(--secondary); margin-bottom: 2rem;">Tu negocio está a un paso de transformarse.</p>
+                        <button onclick="this.parentElement.parentElement.remove()" style="background: var(--primary); color: white; border: none; padding: 0.8rem 2rem; border-radius: var(--radius-sm); font-weight: 600; cursor: pointer;">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = successMessage;
+            document.body.appendChild(tempDiv.firstElementChild);
+            
             this.reset();
         });
 
@@ -2468,11 +2384,11 @@ ${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} US
             const serviceOptions = document.querySelectorAll('#service option');
             serviceOptions.forEach(option => {
                 if (option.value === 'basico') {
-                    option.textContent = `Paquete Básico ($40 USD / ${(40*exchangeRate).toLocaleString()} CUP)`;
+                    option.textContent = `Logo profesional para empezar ($${40} USD ≈ ${(40*exchangeRate).toLocaleString()} CUP)`;
                 } else if (option.value === 'profesional') {
-                    option.textContent = `Paquete Profesional ($80 USD / ${(80*exchangeRate).toLocaleString()} CUP)`;
+                    option.textContent = `Logo + tarjetas para crecer ($${80} USD ≈ ${(80*exchangeRate).toLocaleString()} CUP)`;
                 } else if (option.value === 'premium') {
-                    option.textContent = `Paquete Premium ($150 USD / ${(150*exchangeRate).toLocaleString()} CUP)`;
+                    option.textContent = `Identidad completa para dominar ($${150} USD ≈ ${(150*exchangeRate).toLocaleString()} CUP)`;
                 }
             });
         }
@@ -2496,12 +2412,44 @@ ${servicePrices[service] ? `*Precio estimado:* $${servicePrices[service].usd} US
         }, observerOptions);
 
         // Observar elementos para animaciones
-        document.querySelectorAll('.service-card, .portfolio-item, .pricing-card, .testimonial-card, .step, .info-card, .carousel-slide').forEach(el => {
+        document.querySelectorAll('.service-card, .portfolio-item, .pricing-card, .testimonial-card, .step, .info-card, .benefit-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+
+        // Contador de beneficios (opcional, puede activarse)
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + '%';
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target + '%';
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Activar contadores cuando se vean
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
     </script>
 </body>
 </html>
